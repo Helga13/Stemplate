@@ -1,0 +1,32 @@
+{
+  "name": "stemplate",
+  "version": "1.0.0",
+  "description": "stemplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "author": "flxmd.by",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "bower": "^1.6.5",
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-svgmin": "^1.2.0",
+    "gulp-svgstore": "^5.0.5",
+    "gulp-uglify": "^1.4.2",
+    "gulp-watch": "^4.3.5",
+    "gulp-wrap": "^0.11.0"
+  },
+  "dependencies": {}
+}
