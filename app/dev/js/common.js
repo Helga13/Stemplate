@@ -1,5 +1,22 @@
 $(document).ready(function () {
-	
+    
+    // scroll menu
+    
+    
+$(window).scroll(function () {
+
+    console.log($(document).scrollTop());
+    if ($(window).scrollTop() >= 0){
+        $('header, header.wrapper').animate({'height':'215'},2000);
+        $('.bg-opacity').animate({'height':'215', 'background-color':'rgba(0,0,0,1)'},2000);
+        $('.description').animate({'padding-top':'150', 'opacity':'0'},2000);
+        $('.content').animate({'padding-top':'215'},2000);
+        $('header').addClass('height215');
+    }
+    
+});
+   
+        
 	// переход по табам
 	
 $('.tab a').click(function(e) {
@@ -16,20 +33,19 @@ $('.tab a').click(function(e) {
 
 $(window).scroll(function () {
 
-	if ($(window).scrollTop() + $(window).height() >= ($(document).height() - 70)) {//$('#scroller').animate({'opacity':'1'},0);
+	if ($(window).scrollTop() + $(window).height() >= ($(document).height() - 150)) {//$('#scroller').animate({'opacity':'1'},0);
 	$('#scroller').addClass('is-active');
 	}else {
 		//$('#scroller').animate({'opacity':'0'},0);
 		$('#scroller').removeClass('is-active');
 	}});
 		$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400);
-		
+	
 	return false;
-                                         });
+ });
 	
 	// popup
 	
-//	var p = $('.popup__overlay')
 $('#popup__toggle').click(function(e) {
 	e.preventDefault();
      $('.popup__overlay').css('display', 'block')
@@ -44,7 +60,13 @@ $('.popup__close').click(function(e) {
 	e.preventDefault();
      $('.popup__overlay').css('display', 'none')
 });
-
 	
+	// переключение языков в popup
+
+	$('.lang a').click(function() {
+        $('a').removeClass('active');
+        $(this).addClass('active');
+    });
+    
 	
 });
