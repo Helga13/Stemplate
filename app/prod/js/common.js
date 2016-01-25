@@ -67,6 +67,23 @@ $('.popup__close').click(function(e) {
         $('a').removeClass('active');
         $(this).addClass('active');
     });
+	
+	// сортировка в catalog свои стили
+	
+ 	//$(function(){
+	//	$('select.styled').customSelect();
+	//}); 
+	
+	// catalog-inner слайдер с миниатюрами
+	
+	$('.show-image').click(function(e) {
+    e.preventDefault();
+    var mainImage = $(this).index(); 
+     $('.show-image').removeClass('show-image-active');
+    $(this).addClass('show-image-active'); 
+    $('.images li').removeClass('active');
+    $('.images li').eq(mainImage).addClass('active'); 
+});
     
 	
 });
