@@ -44,7 +44,7 @@ $(window).scroll(function () {
 	return false;
  });
 	
-	// popup
+	// popup menu
 	
 $('#popup__toggle').click(function(e) {
 	e.preventDefault();
@@ -84,6 +84,44 @@ $('.popup__close').click(function(e) {
     $('.images li').removeClass('active');
     $('.images li').eq(mainImage).addClass('active'); 
 });
+	
+	// catalog-inner choose-size-dropdown
+	
+	$('.choose-size-dropdown').on('click',function() {
+		if($(this).hasClass('visible')){
+			$(this).removeClass('visible');
+		}else{
+			$(this).addClass('visible');
+		}
+		
+    });
     
+	// catalog-inner, marked sizes
+	
+	$('.size-table li').on('click',function() {
+        if($(this).hasClass('marked')){
+			$(this).removeClass('marked');
+		}else{
+			$(this).addClass('marked');
+		}
+    });
+	
+	// popup size-guid
+	
+	$('[data-id = size-guid]').click(function(e) {
+	e.preventDefault();
+     $('.overlay_size-guid').css('display', 'block')
+})
+ $('.overlay_size-guid').click(function(event) {
+    e = event || window.event
+    if (e.target == this) {
+        $('.overlay_size-guid').css('display', 'none')
+    }
+})
+$('.popup__close_cross').click(function(e) {
+	e.preventDefault();
+     $('.overlay_size-guid').css('display', 'none')
+});
+	
 	
 });
