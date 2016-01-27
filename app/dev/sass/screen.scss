@@ -92,6 +92,9 @@ figure {
 
 /* ============= start of general classes ======================= */
 
+.clearfix{
+	@include clearfix;
+}
 
 /* .p-relative{
 	position: relative;
@@ -1079,6 +1082,7 @@ footer {
 
 .links {
 	margin: 30px 0;
+	float: left;
 }
 .links li {
 	display: inline-block;
@@ -1092,7 +1096,7 @@ footer {
 	font-family: P22UndergroundCYPro-Demi, Arial, sans-serif;
 	transition: color 1s ease;
 	line-height: 30px;
-	margin-right: 30px;
+	margin-right: 28px;
 }
 .links li a.active {
 	border-bottom: 1px solid $pinkColor;
@@ -1245,23 +1249,66 @@ footer {
 
 /* sort by доработать!*/
 
-ul.sort-by {
-    border: none;
-    background-color: transparent;
-    text-transform: uppercase;
-    width: auto;
-    cursor: pointer;
-	position: relative;
-	li{
-		display: none;
-		position: absolute;
-	}
+.sort-block{
+	width: 23.5%;
+	float: right;
+	margin: 30px 0;
 }
-ul.sort-by:hover li{ /*по клику*/
-	display: block;
-	z-index: 5;
+.sort-block span > em{
+	color: #979797;
+	line-height: 30px;
 }
 
+.sort-list{
+	width: auto;
+	color: $mainDarkColor;
+	font-family: $P22UndergroundCYPro-Demi;
+	font-size: 12px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	
+}
+.sort-list .sort-by {
+	cursor: pointer;
+	color: $pinkColor;
+	width: 100%;
+	z-index: 11;
+}
+.sort-by .arr-down {
+	width: 10px;
+	height: 10px;
+	float: right;
+	padding-top: 3px;
+}
+.sort-by span {
+	padding-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sort-by span:hover {
+	color: $pinkColorDarker;
+}
+.sort-by span:hover .arr-down polygon {
+	fill: $pinkColorDarker;
+}
+.sort-list ul.sort-dropdown {
+	z-index: 10;
+	background: #fff;
+	position: absolute;
+	padding: 20px 30px;
+	display: none;
+	border-top: 10px solid #ebebeb;
+}
+ul.sort-dropdown li {
+	line-height: 35px;
+}
+ul.sort-dropdown li:hover {
+	cursor: pointer;
+	color: $pinkColor;
+}
+
+/* end sort by доработать!*/
 
 /* catalog-inner */
 
