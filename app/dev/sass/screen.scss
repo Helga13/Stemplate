@@ -1275,6 +1275,9 @@ footer {
 	width: 100%;
 	z-index: 11;
 }
+.sort-list .sort-by.sort-by_dark{
+	color: $mainDarkColor;
+}
 .sort-by .arr-down {
 	width: 10px;
 	height: 10px;
@@ -1289,7 +1292,8 @@ footer {
 .sort-by span:hover {
 	color: $pinkColorDarker;
 }
-.sort-by span:hover .arr-down polygon {
+.sort-by:hover .arr-down polygon,
+.sort-by.sort-by_dark:hover .arr-down polygon {
 	fill: $pinkColorDarker;
 }
 .sort-list ul.sort-dropdown {
@@ -1585,12 +1589,14 @@ i.caret{
 }
 
 
-section.content .tab.tab.catalog-inner-tabs{
+section.content .tab.tab.catalog-inner-tabs,
+.tab .size-guide-tabs{
 	text-align: left;
 	margin-bottom: 10px;
 }
 
-section.content .tab.tab.catalog-inner-tabs .tab-link{
+section.content .tab.tab.catalog-inner-tabs .tab-link,
+.tab .size-guide-tabs .tab-link{
 	margin: 0;
 	margin-right: 30px;	
 }
@@ -1701,6 +1707,7 @@ section.content .tab.tab.catalog-inner-tabs .tab-link{
     background: rgba(0,0,0,.7);
     text-align: center;
 	z-index: 5;
+	overflow-y: auto;
 }
 
 .overlay_size-guid:after{
@@ -1714,16 +1721,94 @@ section.content .tab.tab.catalog-inner-tabs .tab-link{
 .popup_size-guid{
 	display: inline-block;
     position: relative;
-    max-width: 80%;
-    padding: 20px;
+    width: 52%;
+    padding: 50px;
     background: #fff;
     vertical-align: top;
 	top: 170px;
+	text-align: left;
+	overflow-y: auto;
 }
 
 .popup__close_cross{
-	display: block;
-	height: 10px;
-	width: 10px;
-	float: right;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	height: 25px;
+	width: 25px;
+	
+}
+
+.size-guide-content{
+	padding: 20px 0;
+	h2{
+		letter-spacing: .1em;
+		margin-bottom: 30px;
+	}
+	h3{
+		padding: 0;
+		padding: 10px 0;
+		font-size: 16px;
+		letter-spacing: .1em;
+	}
+	p{
+		line-height: 22px;
+	}
+	ul li{
+		list-style: decimal;
+		list-style-position: inside;
+		line-height: 22px;
+		padding: 5px 0;
+	}
+} 
+.size-guide-content a{
+	color: $mainDarkColor;
+}
+
+	.tab.size-guide-tabs  {
+
+		.tab-link {
+			display: inline-block;
+			font-size: 12px;
+			line-height: 20px;
+			margin-right: 20px;
+			letter-spacing: .1em;
+		}
+		.tab-link_active {
+			span {
+				border-bottom: 1px solid $pinkColor;
+			}
+		}
+		span {
+			font-size: 12px;
+			display: inline-block;
+			color: #000;
+			text-transform: uppercase;
+			font-family: $P22UndergroundCYPro-Demi;
+			transition: color 1s ease;
+		}
+		.tab-link:hover span {
+			color: $pinkColor;
+		}
+	}
+
+.size-guide-tabs_content #jackets,
+.size-guide-tabs_content #misses,
+.size-guide-tabs_content #evening,
+.size-guide-tabs_content #bridal,
+.size-guide-tabs_content #jeans{
+	display: none;
+}
+
+.size-guide-tabs_content{
+	margin-top: 25px;
+}
+
+table tbody{
+	border-top: 2px solid $mainDarkColor;
+    border-bottom: 2px solid $mainDarkColor;
+}
+table th,
+table td {
+        padding: 20px;
 }
