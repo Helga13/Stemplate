@@ -114,6 +114,9 @@ $(document).ready(function () {
 
 	});
 	
+	// сортировка выпадающий список в модальном
+	
+	//  пахало одновременно со страничной сортировкой
 
 	// catalog-inner слайдер с миниатюрами
 
@@ -162,6 +165,27 @@ $(document).ready(function () {
 	$('.popup__close_cross').click(function (e) {
 		e.preventDefault();
 		$('.overlay_size-guid').css('display', 'none')
+	});
+	
+	
+	// search field
+	
+	$(".js-clear-input").on("click", function(){
+		$(this).parents(".js-form").find(".js-input").val("");
+		//$('.ajax-menu-search-container').html('');
+		$(".show-more").hide();
+		$(this).fadeOut();
+		return false;
+	});
+	
+		$(".js-input").on("keyup", function(){
+		if ($(this).val().length) {
+			$(this).parents(".js-form").find(".js-clear-input").fadeIn();
+		}
+		else {
+			$(this).parents(".js-form").find(".js-clear-input").fadeOut();
+		}
+
 	});
 
 
