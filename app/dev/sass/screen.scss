@@ -2165,4 +2165,9 @@ li.srch-block {
 	border: 2px solid $pinkColor;
 	padding: 50px 30px;
 	box-sizing: border-box;
+	h3 + p{
+		padding: 30px 0 40px;
+		line-height: 22px;
+	}
+
 }
