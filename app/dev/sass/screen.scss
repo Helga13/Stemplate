@@ -2230,24 +2230,30 @@ li.srch-block {
 .cart-block tbody tr:first-child td:nth-child(1),
 .cart-block tbody tr:first-child td:nth-child(2),
 .cart-block tbody tr:first-child td:nth-child(3),
-.cart-block tbody tr:first-child td:nth-child(4){
+.cart-block tbody tr:first-child td:nth-child(4),
+.checkout-block tbody tr:first-child td:nth-child(1),
+.checkout-block tbody tr:first-child td:nth-child(2){
 	padding-top: 35px;
 }
 
 .cart-block tbody tr:last-child td:nth-child(1),
 .cart-block tbody tr:last-child td:nth-child(2),
 .cart-block tbody tr:last-child td:nth-child(3),
-.cart-block tbody tr:last-child td:nth-child(4){
+.cart-block tbody tr:last-child td:nth-child(4),
+.checkout-block tbody tr:nth-last-child(2) td:nth-child(1),
+.checkout-block tbody tr:nth-last-child(2) td:nth-child(2){
 	padding-bottom: 45px;
 }
 
-.cart-block tbody tr td:first-child{
+.cart-block tbody tr td:first-child,
+.checkout-block tbody tr td:first-child{
 	padding: 15px 50px 15px 40px;
 }
 
 .cart-block tbody tr td:nth-child(2),
 .cart-block tbody tr td:nth-child(3),
-.cart-block tbody tr td:nth-child(4){
+.cart-block tbody tr td:nth-child(4),
+.checkout-block tbody tr td:nth-child(2){
 	padding: 15px 15px 15px 0;
 	vertical-align: top;
 }
@@ -2259,7 +2265,8 @@ li.srch-block {
 	letter-spacing: .1em;
 }
 
-.cart-block tbody tr td:nth-child(4){
+.cart-block tbody tr td:last-child,
+.checkout-block tbody tr td:last-child{
 	padding: 15px 40px 15px 15px;
 }
 
@@ -2279,9 +2286,10 @@ li.srch-block {
 	fill: $pinkColorDarker;
 }
 
-.cart-table .img-wrap{
+.cart-table .img-wrap,
+.checkout-table .img-wrap{
 	width: 90px;
-	height: 120px;
+	height: 118px;
 	float: left;
 	overflow: hidden;
 	position: relative;
@@ -2299,7 +2307,8 @@ li.srch-block {
 	}
 }
 
-.cart-table p{
+.cart-table p,
+.checkout-table p{
 	text-transform: uppercase;
 	font-family: $P22UndergroundCYPro-Demi;
 	font-size: 12px;
@@ -2307,16 +2316,13 @@ li.srch-block {
 	letter-spacing: .1em;
 }
 
-.cart-table a{
+.cart-table a,
+.checkout-table a{
 	color: $mainDarkColor;
 }
 
-
-.cart-table td{
-//	border: 1px solid;
-}
-
-.cart-table span{
+.cart-table span,
+.checkout-table span{
 	color: #979797;
 }
 
@@ -2324,6 +2330,105 @@ li.srch-block {
 	margin-top: 56px;
 	margin-bottom: 270px;
 }
+
+/* 4-1basket page */
+
+.checkout-block{
+	width: 30.77%; /* 400px/1300px */
+	margin-right: 7.31%; /* 95px/1300px */
+	float: left;
+}
+
+.checkout-block table{
+	background: #fff;
+	position: relative;
+}
+
+.checkout-block table tbody{
+	border: none;
+}
+ 
+.checkout-block thead tr th:nth-child(1){
+	width: 75%; /* 300px/400px */ 
+	text-align: left;
+	font-family: $P22UndergroundCYPro-Demi;
+	font-size: 24px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	padding-top: 55px;
+	padding-left: 40px;
+}
+
+.checkout-block thead tr th:nth-child(2){
+	width: 25%;  /* 100px/400px */
+	text-align: right;
+	position: relative;
+}
+
+.checkout-block tbody tr td:nth-child(2){
+	font-family: $P22UndergroundCYPro-Heavy;
+	text-align: right;
+	font-size: 14px;
+	letter-spacing: .1em;
+	padding-top: 15px;
+}
+
+.checkout-block tbody tr:last-child td:first-child{
+	color: #979797;
+}
+
+
+.checkout-block tbody::after{
+	content: '';
+	position: absolute;
+	bottom: 108px;
+	left: 32px;
+	display: inline-block;
+	width: 336px;
+	height: 1px;
+	background: #ebebeb;
+}
+
+.checkout-block tbody tr:last-child td:nth-child(1),
+.checkout-block tbody tr:last-child td:nth-child(2){
+	padding-bottom: 65px;
+}
+
+.your-payment.customer-info{
+	width: 61.92%; /* 805px/1300px */
+	padding: 55px 50px;
+	border: none;
+	background: #fff;
+}
+
+.your-payment.customer-info h3{
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.your-payment.customer-info .contact-details,
+.your-payment.customer-info .paiment-meth{
+	width: 43.48%;  /* 402px/805px */
+	float: left;
+}
+
+.your-payment.customer-info .contact-details p,
+.your-payment.customer-info .paiment-meth p{
+	font-family: $P22UndergroundCYPro-Demi;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.your-payment.customer-info .contact-details{
+	border-right: 1px solid #d2d2d2;
+	padding-right: 40px;
+}
+
+.your-payment.customer-info .paiment-meth{
+	padding-left: 40px;
+}
+
 
 /* payment page */
 
@@ -2361,13 +2466,16 @@ li.srch-block {
 	}
 }
 
+.order-data
+
 .order-block{
 	background: #fff;
 	padding: 50px 35px;
 }
 
 .order-data button.edit,
-.your-payment button.edit{
+.your-payment button.edit,
+.checkout-table button.edit{
 		border: 0;
 		background: none;
 		outline: none;
@@ -2375,7 +2483,7 @@ li.srch-block {
 		height: 20px;
 		width: 20px;
 		right: 35px;
-		top: 50px;
+		top: 55px;
 	}
 
 .order-data dl dd{
