@@ -15,7 +15,7 @@ $pinkColorDarker: #db0a59;
 $mainDarkColor: #181818;
 $borderRadius: 4px;
 @mixin transition($name) {
-	transition: $name .7s ease;
+	transition: $name .25s ease;
 }
 
 @mixin clearfix {
@@ -207,6 +207,10 @@ section.main-menu {
 		cursor: pointer;
 		width: 20%;
 		float: left;
+		div{
+			width: 93px;
+			height: 20px;
+		}
 	}
 	.svg-menu {
 		display: inline-block;
@@ -216,16 +220,26 @@ section.main-menu {
 			overflow: initial;
 		}
 		path {
-			transition: fill 1s ease, transform 1s ease;
+			transition: fill .25s ease, transform .25s ease;
 		}
 	}
+	
+	.menu-button{
+		display: block;
+    	height: 100%;
+	}
+
 	.menu-button span:last-child {
 		display: inline-block;
 		text-transform: uppercase;
-		top: -3px;
+		top: -4px;
 		position: relative;
 		left: 15px;
-		transition: color 1s ease;
+		font-size: 12px;
+		letter-spacing: .1em;
+		@include transition(color);
+		
+		
 	}
 	.menu-button:hover {
 		.svg-menu svg path {
@@ -238,10 +252,17 @@ section.main-menu {
 			color: $pinkColor;
 		}
 	}
-	.logo {
+	.logo-block {
 		width: 60%;
 		float: left;
 		text-align: center;
+		.logo{
+			width: 140px;
+			margin: 0 auto;
+			a{
+				display: block;
+			}
+		}
 	}
 	.right-icons {
 		text-align: right;
@@ -261,11 +282,11 @@ section.main-menu {
 			li a svg line,
 			li a svg path {
 				stroke: #fff;
-				transition: all 1s ease;
+				transition: all .25s ease;
 			}
 			.cart a svg path[fill='#E1E1E1'] {
 				fill: #fff;
-				transition: all 1s ease;
+				transition: all .25s ease;
 			}
 			li a:hover svg circle,
 			li a:hover svg line,
@@ -284,6 +305,12 @@ section.description {
 	position: absolute;
 	width: 100%;
 	padding-top: 200px;
+}
+
+section.description h1{
+	text-transform: uppercase;
+	font-size: 24px;
+	letter-spacing: .05em;
 }
 
 section.second-menu {
@@ -902,7 +929,7 @@ section.content {
 
 footer {
 	background-color: #383838;
-	height: 320px;
+	height: 317px;
 	.left-col,
 	.mid-col,
 	.right-col {
@@ -921,8 +948,8 @@ footer {
 			list-style: none;
 			color: #fff;
 			text-transform: uppercase;
-			font-family: $P22UndergroundCYPro-Medium;
-			margin-top: 30px;
+			font-family: $P22UndergroundCYPro-Demi;
+			margin-top: 26px;
 			font-size: 0;
 			width: 80%;
 			li {
@@ -932,6 +959,7 @@ footer {
 				/*12px*/
 				a {
 					@include transition(color);
+					letter-spacing: .1em;
 				}
 				a:hover {
 					color: $pinkColorDarker;
@@ -939,11 +967,12 @@ footer {
 			}
 		}
 		p {
-			margin: 50px 0 30px;
-			width: 80%;
+			margin: 43px 0 22px;
+			width: 95%;
+			line-height: 22px;
 		}
 		.footer-item-icons {
-			margin-bottom: 50px;
+			margin-bottom: 39px;
 			img {
 				margin-right: 25px;
 			}
@@ -955,18 +984,20 @@ footer {
 		.mail {
 			padding-right: 20px;
 			border-right: 1px solid #787878;
+			@include transition(color);
 		}
 		#subscribe {
 			padding-left: 15px;
 			@include transition(color);
 		}
-		#subscribe:hover {
+		#subscribe:hover,
+		.mail:hover{
 			color: $pinkColorDarker;
 		}
 	}
 	.left-col {
 		p {
-			margin: 30px 0;
+			margin: 35px 0;
 		}
 	}
 	.right-col {
@@ -979,10 +1010,15 @@ footer {
 		font-size: 0.75em;
 		/*12px*/
 		.flxmd {
-			color: #fff;
-			@include transition(color);
+			color: #787878;
+			letter-spacing: .05em;
+
+			span{
+				color: #fff;
+				@include transition(color);
+			}
 		}
-		.flxmd:hover {
+		.flxmd:hover span{
 			color: $pinkColorDarker;
 		}
 		#scroller {
@@ -1018,6 +1054,12 @@ footer {
 			margin-top: 0;
 		}
 	}
+}
+
+footer .logo a{
+	display: block;
+	height: 50px;
+	width: 140px;
 }
 
 
@@ -2423,11 +2465,17 @@ li.srch-block {
 .your-payment.customer-info .contact-details{
 	border-right: 1px solid #d2d2d2;
 	padding-right: 40px;
+		input{
+		width: 100%;
+	}
 }
 
 .your-payment.customer-info .paiment-meth{
 	padding-left: 40px;
+
 }
+
+
 
 
 /* payment page */
