@@ -2196,6 +2196,13 @@ li.srch-block {
 	letter-spacing: .05em;
 }
 
+.cart-block thead tr th:nth-child(1),
+.cart-block thead tr th:nth-child(2),
+.cart-block thead tr th:nth-child(3),
+.cart-block thead tr th:nth-child(4){
+	padding-bottom: 18px;
+}
+
 .cart-block thead tr th:nth-child(1){
 	width: 53.04%;  /* 387px/805px */
 	padding-left: 40px;
@@ -2220,11 +2227,27 @@ li.srch-block {
 	background: #fff;
 }
 
-.cart-block tbody tr td:nth-child(1){
-	padding: 15px 15px 15px 40px;
+.cart-block tbody tr:first-child td:nth-child(1),
+.cart-block tbody tr:first-child td:nth-child(2),
+.cart-block tbody tr:first-child td:nth-child(3),
+.cart-block tbody tr:first-child td:nth-child(4){
+	padding-top: 35px;
 }
+
+.cart-block tbody tr:last-child td:nth-child(1),
+.cart-block tbody tr:last-child td:nth-child(2),
+.cart-block tbody tr:last-child td:nth-child(3),
+.cart-block tbody tr:last-child td:nth-child(4){
+	padding-bottom: 45px;
+}
+
+.cart-block tbody tr td:first-child{
+	padding: 15px 50px 15px 40px;
+}
+
 .cart-block tbody tr td:nth-child(2),
-.cart-block tbody tr td:nth-child(3){
+.cart-block tbody tr td:nth-child(3),
+.cart-block tbody tr td:nth-child(4){
 	padding: 15px 15px 15px 0;
 	vertical-align: top;
 }
@@ -2234,6 +2257,26 @@ li.srch-block {
 	text-align: right;
 	font-size: 14px;
 	letter-spacing: .1em;
+}
+
+.cart-block tbody tr td:nth-child(4){
+	padding: 15px 40px 15px 15px;
+}
+
+.cart-block tbody tr td:nth-child(4) a{
+	display: block;
+	height: 13px;
+	width: 13px;
+	float: right;
+}
+
+.cart-block tbody tr td:nth-child(4) a path{
+	@include transition(fill);
+}
+
+
+.cart-block tbody tr td:nth-child(4) a:hover path{
+	fill: $pinkColorDarker;
 }
 
 .cart-table .img-wrap{
@@ -2270,11 +2313,16 @@ li.srch-block {
 
 
 .cart-table td{
-	border: 1px solid;
+//	border: 1px solid;
 }
 
 .cart-table span{
 	color: #979797;
+}
+
+.your-payment.checkout{
+	margin-top: 56px;
+	margin-bottom: 270px;
 }
 
 /* payment page */
