@@ -6,23 +6,23 @@ $(document).ready(function () {
 	$(window).scroll(function () {
 
 		//console.log($(document).scrollTop());
-		if ($(window).scrollTop() >= 0) {
-			$('header, header.wrapper').animate({
-				'height': '215'
-			}, 2000);
-			$('.bg-opacity').animate({
-				'height': '215',
-				'background-color': 'rgba(0,0,0,1)'
-			}, 2000);
-			$('.description').animate({
-				'padding-top': '150',
-				'opacity': '0'
-			}, 2000);
-			$('.content').animate({
-				'padding-top': '215'
-			}, 2000);
-			$('header').addClass('height215');
-		}
+//		if ($(window).scrollTop() >= 0) {
+//			$('header, header.wrapper').animate({
+//				'height': '215'
+//			}, 2000);
+//			$('.bg-opacity').animate({
+//				'height': '215',
+//				'background-color': 'rgba(0,0,0,1)'
+//			}, 2000);
+//			$('.description').animate({
+//				'padding-top': '150',
+//				'opacity': '0'
+//			}, 2000);
+//			$('.content').animate({
+//				'padding-top': '215'
+//			}, 2000);
+//			$('header').addClass('height215');
+//		}
 
 	});
 

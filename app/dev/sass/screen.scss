@@ -74,6 +74,7 @@ h3 {
 	padding-top: 15px;
 	line-height: 1.5em;
 	letter-spacing: 0.05em;
+	font-weight: normal;
 }
 
 p {
@@ -95,7 +96,7 @@ hr {
 }
 
 time {
-	color: #d2d2d2;
+	color: #979797;
 	font-style: italic;
 }
 
@@ -113,11 +114,6 @@ figure {
 .clearfix {
 	@include clearfix;
 }
-
-
-/* .p-relative{
-	position: relative;
-} */
 
 .f-left {
 	float: left;
@@ -159,11 +155,9 @@ header {
 	color: #fff;
 	background: url(../../prod/img/bg-header.png) no-repeat;
 	background-size: cover;
-	height: 510px;
+	height: 512px;
 	/* position: relative; */
 	z-index: 5;
-	position: fixed;
-	/*menu fixed*/
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -172,15 +166,15 @@ header {
 .bg-opacity {
 	position: absolute;
 	width: 100%;
-	height: 510px;
-	background-color: rgba(0, 0, 0, .8);
-	/* background-color: #000; */
+	height: 512px;
+	background-color: rgba(24, 24, 24, .9);
+	/* background-color: $mainDarkColor; */
 	/* opacity: .8; */
 	top: 0;
 	left: 0;
 	/* overflow: hidden; */
 	/* z-index: 3; */
-	transition: background-color 4s ease;
+	transition: background-color 4s ease;  /* хидер */
 }
 
 header.height215 .bg-opacity {
@@ -276,7 +270,7 @@ section.main-menu {
 				display: inline-block;
 				height: 20px;
 				width: 20px;
-				transition: all 3s ease;
+				transition: all .25s ease;
 			}
 			li a svg circle,
 			li a svg line,
@@ -304,13 +298,18 @@ section.description {
 	text-align: center;
 	position: absolute;
 	width: 100%;
-	padding-top: 200px;
+	padding-top: 205px;
 }
 
 section.description h1{
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 1.5em;
 	letter-spacing: .05em;
+	margin: 15px 0;
+}
+
+section.description p{
+	line-height: 1.5em;
 }
 
 section.second-menu {
@@ -321,48 +320,59 @@ section.second-menu {
 		font-size: 1em;
 		position: relative;
 		.categories {
-			display: inline-block;
-			padding: 36px 2px;
+			display: inline-table;
 			margin: 0 18px;
-			position: relative;
+			cursor: pointer;
+			letter-spacing: .05em;
+			height: 90px;
 		}
 		.categories a {
-			transition: color 1s ease;
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+			text-transform: uppercase;
+			@include transition(color);
 		}
-		.categories::after {
+		.categories > a::after {
 			content: "";
-			bottom: 15px;
-			z-index: 6;
+			bottom: 13px;
+			z-index: 8;
 			position: absolute;
 			height: 2px;
 			left: 0;
 			width: 100%;
-			transition: bottom 1s ease;
+			opacity: 0;
+			transition: opacity .25s ease, bottom .25s ease;
+			transition-delay: .5s;
 		}
-		.categories:hover a {
+		.categories:hover > a {
 			color: $pinkColor;
 		}
-		.categories:hover::after {
+		.categories:hover > a::after {
 			content: "";
 			opacity: 1;
 			background-color: $pinkColor;
 			bottom: -2px;
+			transition-delay: .5s;
 		}
 		.content-hovered {
-			width: 1000px;
-			padding: 60px;
-			color: #000;
+			width: 992px;
+			padding: 50px 65px;
+			color: $mainDarkColor;
 			background-color: #fff;
 			position: absolute;
-			left: -350px;
+			left: 155px;
 			top: 75px;
-			z-index: 3;
+			z-index: 7;
 			opacity: 0;
 			visibility: hidden;
-			transition: opacity 0.3s ease, top 1s ease;
+			transition: opacity .25s ease, top .25s ease;
+			transition-delay: .5s;
+			cursor: initial;
+			box-sizing: border-box;
 			/* display: none; */
 			.by-category {
-				width: 30%;
+				width: 22.18%; /* 220px/992px */
 				float: left;
 				font-family: $P22UndergroundCYPro-Demi;
 				text-align: left;
@@ -371,19 +381,21 @@ section.second-menu {
 					li {
 						list-style: none;
 						text-transform: uppercase;
-						line-height: 30px;
+						font-size: 0.75em;
+						letter-spacing: .1em;
+						padding-bottom: 20px;
 						a {
-							color: #000;
+							color: $mainDarkColor;
 						}
 					}
 				}
 			}
 			.pic-templates {
-				width: 70%;
+				width: 77.82%; /* 670px/992px */
 				float: left;
 				.item-wrap {
 					height: 270px;
-					width: 22.65%;
+					width: 22%;
 					/* 145px/640px*100% ширина блока */
 					margin-right: 3.1%;
 					/* 20px/640px*100% ширина отступа */
@@ -400,7 +412,7 @@ section.second-menu {
 						.template-sale {
 							position: absolute;
 							right: 15px;
-							top: 0;
+							top: 5px;
 							color: $pinkColor;
 							z-index: 2;
 						}
@@ -415,16 +427,17 @@ section.second-menu {
 					dl {
 						font-family: $P22UndergroundCYPro-Demi;
 						text-transform: uppercase;
-						line-height: 20px;
-						transition: color 1s ease;
+						line-height: 1.5em;
+						@include transition(color);
 						font-size: 0.75em;
 						/*12px*/
 						dt {
-							transition: color 1s ease;
+							padding: 13px 0 6px;
+							@include transition(color);
 						}
 						dd {
 							font-family: $P22UndergroundCYPro-Heavy;
-							font-size: 0.875em;
+							font-size: 1.166em;
 							/*14px*/
 							margin: 0;
 						}
@@ -446,6 +459,7 @@ section.second-menu {
 				color: #cdcdcd;
 				text-align: left;
 				padding-bottom: 30px;
+				line-height: 2.25em;
 			}
 		}
 		.categories:hover .content-hovered {
@@ -476,7 +490,6 @@ section.second-menu {
 } */
 
 section.content {
-	padding-top: 510px;
 	ul.advantages {
 		font-size: 0;
 		padding: 0;
@@ -488,27 +501,30 @@ section.content {
 			position: relative;
 			p {
 				padding: 45px;
-				padding-left: 70px;
+				padding-left: 75px;
 			}
 		}
+		li.dress p{
+			padding-left: 70px;
+		}				
 		li.scissors::before {
 			content: "";
 			background: url('../../prod/img/svg/scissors.svg') no-repeat;
 			position: absolute;
-			top: 40px;
+			top: 45px;
 			left: 0;
 			display: block;
-			width: 60px;
+			width: 50px;
 			height: 50px;
 		}
 		li.cost::before {
 			content: "";
 			background: url('../../prod/img/svg/cost.svg') no-repeat;
 			position: absolute;
-			top: 40px;
+			top: 45px;
 			left: 0;
 			display: block;
-			width: 60px;
+			width: 50px;
 			height: 50px;
 		}
 		li.dress::before {
@@ -516,9 +532,9 @@ section.content {
 			background: url('../../prod/img/svg/dress.svg') no-repeat;
 			position: absolute;
 			top: 40px;
-			left: 0;
+			left: 16px;
 			display: block;
-			width: 60px;
+			width: 50px;
 			height: 50px;
 		}
 		li.pen::before {
@@ -528,7 +544,7 @@ section.content {
 			top: 40px;
 			left: 0;
 			display: block;
-			width: 60px;
+			width: 50px;
 			height: 50px;
 		}
 	}
@@ -550,7 +566,7 @@ section.content {
 			position: relative;
 			border-radius: $borderRadius;
 			background-color: transparent;
-			transition: background-color 1s ease;
+			@include transition(background-color);
 			img {
 				position: absolute;
 				top: 50%;
@@ -558,27 +574,31 @@ section.content {
 				transform: translate(-50%, -50%);
 				object-fit: cover;
 				opacity: 1;
-				transition: opacity 1s ease;
+				width: 100%;
+				height: 100%;
+				@include transition(opacity);
 			}
 			span {
 				position: absolute;
-				color: #000;
-				bottom: 10px;
+				color: $mainDarkColor;
+				bottom: 0;
 				text-transform: uppercase;
 				width: 100%;
 				display: block;
 				text-align: center;
 				padding: 10px 0;
+				transform: translateZ(0);
+    			font-weight: normal;
 				margin-bottom: 15px;
 				font-family: $P22UndergroundCYPro-Medium;
-				transition: color 1s ease;
+				@include transition(color);
 			}
 		}
 		.banner-wrap:hover {
 			background-color: $pinkColor;
 		}
 		.banner-wrap:hover img {
-			opacity: .3;
+			opacity: .4;
 		}
 		.banner-wrap:hover span {
 			color: #fff;
@@ -596,7 +616,7 @@ section.content {
 		text-align: center;
 		height: 130px;
 		overflow: hidden;
-		margin-bottom: 60px;
+		margin-bottom: 52px;
 		a {
 			display: block;
 			height: 100%;
@@ -606,12 +626,14 @@ section.content {
 			@include transition (background);
 		}
 		h2 {
-			padding-top: 45px;
+			padding-top: 43px;
 			color: $pinkColor;
+			letter-spacing: 0.05em;
 			@include transition (color);
 		}
 		em {
 			color: #cdcdcd;
+			line-height: 1.75em;
 			@include transition (color);
 		}
 		span {
@@ -641,7 +663,7 @@ section.content {
 	.browse-sewing-templates {
 		margin-bottom: 60px;
 		h2 {
-			margin-bottom: 40px;
+			margin-bottom: 26px;
 			width: 50%;
 			float: left;
 		}
@@ -650,8 +672,8 @@ section.content {
 		text-align: right;
 		.tab-link {
 			display: inline-block;
-			line-height: 30px;
-			margin-left: 30px;
+			line-height: 26px;
+			margin-left: 26px;
 			letter-spacing: .1em;
 		}
 		.tab-link_active {
@@ -663,10 +685,10 @@ section.content {
 			font-size: 0.75em;
 			/*12px*/
 			display: inline-block;
-			color: #000;
+			color: $mainDarkColor;
 			text-transform: uppercase;
 			font-family: $P22UndergroundCYPro-Demi;
-			transition: color 1s ease;
+			@include transition(color);
 		}
 		.tab-link:hover span {
 			color: $pinkColor;
@@ -693,7 +715,6 @@ section.content {
 		margin-right: 1.25%;
 		/* 20px/1300px*100% ширина отступа */
 		/* float: left; */
-		margin-bottom: 50px;
 		display: inline-block;
 		vertical-align: top;
 		cursor: pointer;
@@ -706,10 +727,11 @@ section.content {
 			border-radius: $borderRadius;
 			.template-sale {
 				position: absolute;
-				right: 15px;
-				top: 20px;
+				right: 16px;
+				top: 12px;
 				color: $pinkColor;
-				z-index: 2;
+				z-index: 4;
+				line-height: 1.5em;
 			}
 			img {
 				border-radius: $borderRadius;
@@ -724,21 +746,25 @@ section.content {
 		dl {
 			font-family: $P22UndergroundCYPro-Medium;
 			text-transform: uppercase;
-			line-height: 30px;
-			transition: color 1s ease;
+			line-height: 24px;
+			letter-spacing: .05em;
+			@include transition(color);
+			dt {
+				padding: 15px 0 10px;
+				@include transition(color);
+			}
 			dd {
 				font-family: $P22UndergroundCYPro-Heavy;
-				font-size: 1.5em;
-				/*24px*/
+				font-size: 1.125em;
+				/*18px*/
+				line-height: 1.33em;
+				letter-spacing: .1em;
 				margin: 0;
-			}
-			dt {
-				transition: color 1s ease;
 			}
 			.old-price {
 				color: #d2d2d2;
 				text-decoration: line-through;
-				padding-left: 20px;
+				padding-left: 8px;
 			}
 		}
 		/*slider*/
@@ -749,16 +775,18 @@ section.content {
 			display: block;
 			height: 30px;
 			width: 120px;
-			line-height: 30px;
+			line-height: 34px;
 			border-radius: $borderRadius;
 			text-transform: uppercase;
 			text-align: center;
 			background-color: $pinkColor;
 			color: #fff;
 			font-family: $P22UndergroundCYPro-Medium;
+			font-size: .75em;
+			letter-spacing: .1em;
 			z-index: 2;
 			opacity: 0;
-			transition: opacity 1s ease, bottom 1s ease;
+			transition: opacity .25s ease, bottom .25s ease;
 		}
 		.tile__gallery {
 			position: absolute;
@@ -769,7 +797,7 @@ section.content {
 			right: 0;
 			top: 0;
 			z-index: 3;
-			transition: opacity 1s;
+			@include transition(opacity);
 		}
 		.brazzers-gallery {
 			width: 100%;
@@ -796,7 +824,7 @@ section.content {
 		}
 		.brazzers-gallery__page .brazzers-gallery__image-wrapper {
 			opacity: 0;
-			transition: opacity 0.4s ease;
+//			transition: opacity 0.4s ease;
 		}
 		.brazzers-gallery__image-wrapper {
 			overflow: hidden;
@@ -806,13 +834,13 @@ section.content {
 			z-index: -2;
 			border-radius: $borderRadius;
 			img {
-				/*    top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
-                        height: 100%;
-                        width: 100%;
-                        position: absolute;
-                        object-fit: cover; */
+//				    top: 50%;
+//                        left: 50%;
+//                        transform: translate(-50%,-50%);
+//                        height: 100%;
+//                        width: 100%;
+//                        position: absolute;
+//                        object-fit: cover; 
 			}
 		}
 		.brazzers-gallery__page:hover .brazzers-gallery__image-wrapper {
@@ -839,7 +867,7 @@ section.content {
 			width: 6px;
 			border-radius: 50%;
 			background-color: #b6b8bf;
-			transition: background-color .2s;
+			@include transition(background-color);
 		}
 		div.brazzers-gallery__page:nth-child(2) > div:nth-child(2) {
 			left: 40px;
@@ -851,19 +879,22 @@ section.content {
 			background-color: $pinkColor;
 		}
 	}
-	.item-wrap:hover {
-		.brazzers-gallery__button {
-			opacity: 1;
-		}
-		.view-details {
-			opacity: 1;
-			bottom: 13px;
-		}
-		dt {
-			color: $pinkColor;
-			/* transition: color 1s ease; */
-		}
+
+	.tile__gallery:hover .brazzers-gallery__button{
+		opacity: 1;
 	}
+	.tile__gallery:hover .brazzers-gallery + .view-details{
+		opacity: 1;
+		bottom: 13px;
+	}
+	
+	.tile__gallery:hover + dl dt{
+		color: $pinkColorDarker;
+	}
+	dt:hover{
+		color: $pinkColorDarker;
+	}
+	
 }
 
 
@@ -876,7 +907,7 @@ section.content {
 	margin-bottom: 100px;
 	overflow: hidden;
 	h2 {
-		margin-bottom: 30px;
+		margin-bottom: 22px;
 	}
 	.articles_content {
 		@include clearfix;
@@ -902,13 +933,21 @@ section.content {
 			z-index: 1;
 		}
 		a + div + h3 {
+			padding-top: 20px;
 			@include transition(color);
+		}
+		a + div{
+			@include transition(background);
+			img{
+				@include transition(opacity);
+			}
 		}
 		a:hover + div + h3 {
 			color: $pinkColorDarker;
 		}
 		p {
-			margin: 20px 0;
+			margin: 9px 0 11px;
+			line-height: 1.375em;
 		}
 		.img-block {
 			border-radius: $borderRadius;
@@ -922,6 +961,13 @@ section.content {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%)
+			}
+		}
+		
+		a:hover + div{
+			background: $pinkColor;
+			img{
+				opacity: .4;
 			}
 		}
 	}
@@ -1003,15 +1049,16 @@ footer {
 	.right-col {
 		text-transform: uppercase;
 		text-align: right;
-		line-height: 260px;
-		height: 260px;
 		margin: 0;
+		padding-top: 119px;
 		position: relative;
 		font-size: 0.75em;
 		/*12px*/
 		.flxmd {
 			color: #787878;
-			letter-spacing: .05em;
+			letter-spacing: .1em;
+			font-family: $P22UndergroundCYPro-Demi;
+			font-size: 12px;
 
 			span{
 				color: #fff;
@@ -1179,10 +1226,10 @@ footer .logo a{
 	font-size: .75em;
 	letter-spacing: 0.1em;
 	display: inline-block;
-	color: #000;
+	color: $mainDarkColor;
 	text-transform: uppercase;
 	font-family: P22UndergroundCYPro-Demi, Arial, sans-serif;
-	transition: color 1s ease;
+	@include transition(color);
 	line-height: 30px;
 	margin-right: 28px;
 }
@@ -1660,7 +1707,7 @@ i.caret {
 	font-size: 12px;
 	letter-spacing: 0.1em;
 	cursor: pointer;
-	transition: color .7s ease, background-color .7s ease;
+	transition: color .25s ease, background-color .25s ease;
 }
 
 .size-table li:hover {
@@ -1752,7 +1799,7 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 .leave-review {
 	color: $pinkColor;
 	border-bottom: 1px dotted $pinkColor;
-	transition: color .7s ease;
+	@include transition(color);
 }
 
 .leave-review:hover {
@@ -1920,10 +1967,10 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 	span {
 		font-size: 12px;
 		display: inline-block;
-		color: #000;
+		color: $mainDarkColor;
 		text-transform: uppercase;
 		font-family: $P22UndergroundCYPro-Demi;
-		transition: color 1s ease;
+		@include transition(color);
 	}
 	.tab-link:hover span {
 		color: $pinkColor;
@@ -2133,7 +2180,7 @@ li.srch-block {
 	overflow: hidden;
 	height: 0;
 	margin: 0;
-	transition: .5s;
+	transition: .25s;
 }
 
 .accordion > label {
