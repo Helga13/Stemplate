@@ -223,11 +223,16 @@ header.header-main{
 }
 
 header.header-main.header-fix{
-	position: fixed;
-	height: 100px;
-	top: 0;
-	.bg-opacity{
+	/* pos+ition: fixed; */
+	/* height: 100px; */
+	/* top: 0; */
+	 .overlay{
+		 position: fixed;
 		height: 100px;
+	} 
+	.switcher{
+		position: fixed;
+		top: 10px;
 	}
 }
 
@@ -396,6 +401,7 @@ section.second-menu {
 		font-family: $P22UndergroundCYPro-Medium;
 		font-size: 1em;
 		position: relative;
+		width: 1300px;
 		.categories {
 			display: inline-table;
 			margin: 0 18px;
