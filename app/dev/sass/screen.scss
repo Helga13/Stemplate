@@ -166,32 +166,15 @@ header {
 		width: 100%;
 		height: 512px;
 		background-color: rgba(24, 24, 24, .9);
-		/* background-color: $mainDarkColor; */
-		/* opacity: .8; */
+		//background-color: $mainDarkColor; 
+		//opacity: .9; 
 		top: 0;
 		left: 0;
 		/* overflow: hidden; */
-		/* z-index: 3; */
+		 z-index: 2; 
 	}
-
 }
 
-.bg-opacity {
-	position: absolute;
-	width: 100%;
-	height: 512px;
-	background-color: rgba(24, 24, 24, .9);
-	/* background-color: $mainDarkColor; */
-	/* opacity: .8; */
-	top: 0;
-	left: 0;
-	/* overflow: hidden; */
-	/* z-index: 3; */
-}
-
-header.header-main .bg-opacity {
-	background-color: rgba(0, 0, 0, 1);
-}
 header.header-main .description {
 	opacity: 0;
 }
@@ -220,7 +203,7 @@ header {
 
 header{
 	.logo-from-top{
-		width: 140px;
+		width: 105px;
 		position: fixed;
 		margin-top: -45px;
 		opacity: 0;
@@ -327,6 +310,7 @@ section.main-menu {
 	}
 	.right-icons {
 		text-align: right;
+		float: right;
 		ul {
 			padding: 0;
 			margin: 0;
@@ -361,7 +345,12 @@ section.main-menu {
 	}
 }
 
-
+header.header-main.header-fix{
+	section.description {
+	padding-top: 0;
+		height: 0;
+	}
+}
 
 section.description {
 	text-align: center;
@@ -369,10 +358,12 @@ section.description {
 	width: 100%;
 	padding-top: 205px;
 	opacity: 1;
+	@include transition(all);
 }
 section.description.description-unvisible {
 	opacity: 0;
-	@include transition(opacity);
+	height: 0;
+	visibility: hidden;
 }
 
 section.description h1{
@@ -383,6 +374,7 @@ section.description h1{
 }
 
 section.description p{
+	color: #e1e1e1;
 	line-height: 1.5em;
 }
 
@@ -457,7 +449,7 @@ section.second-menu {
 			box-sizing: border-box;
 			/* display: none; */
 			.by-category {
-				width: 22.18%; /* 220px/992px */
+				width: 25.58%; /* 220px/860px */
 				float: left;
 				font-family: $P22UndergroundCYPro-Demi;
 				text-align: left;
@@ -468,19 +460,25 @@ section.second-menu {
 						text-transform: uppercase;
 						font-size: 0.75em;
 						letter-spacing: .1em;
-						padding-bottom: 20px;
+						padding: 10px 0;
+						cursor: pointer;
 						a {
 							color: $mainDarkColor;
+						}
+					}
+					li:hover {
+						a {
+							color: $pinkColor;
 						}
 					}
 				}
 			}
 			.pic-templates {
-				width: 77.82%; /* 670px/992px */
+				width: 74.42%; /* 640px/860px */
 				float: left;
 				.item-wrap {
 					height: 270px;
-					width: 22%;
+					width: 22.67%;
 					/* 145px/640px*100% ширина блока */
 					margin-right: 3.1%;
 					/* 20px/640px*100% ширина отступа */
@@ -564,15 +562,16 @@ section.second-menu {
 }
 
 
-/* .overlay {
+.overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,.8);
+    background-color: #181818;
+	opacity: 0;
     z-index: 1;
-} */
+} 
 
 section.content {
 	ul.advantages {
@@ -976,7 +975,7 @@ section.content {
 	.tile__gallery:hover + dl dt{
 		color: $pinkColorDarker;
 	}
-	dt:hover{
+	dl:hover dt{
 		color: $pinkColorDarker;
 	}
 	
