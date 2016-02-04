@@ -56,6 +56,21 @@ $(document).ready(function () {
 		}
 
 	});
+	
+	// открытие меню по ховеру
+	
+	//$('.categories').hover(function (e) {
+	//	e.preventDefault();
+	//	$('.content-hovered').removeClass('tab-link_active');
+	//	$(this).addClass('tab-link_active');
+	//	var tab = $(this).attr('href');
+	//	$('.tab-content').not(tab).css({
+	//		'display': 'none'
+	//	});
+	//	$(tab).fadeIn(300);
+
+	//});
+
 
 
 	// переход по табам

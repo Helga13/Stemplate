@@ -286,9 +286,7 @@ section.main-menu {
 		left: 15px;
 		font-size: 12px;
 		letter-spacing: .1em;
-		@include transition(color);
-		
-		
+		@include transition(color);	
 	}
 	.menu-button:hover {
 		.svg-menu svg path {
@@ -383,35 +381,27 @@ section.description p{
 	line-height: 1.5em;
 }
 
-header.header-main.header-fix{  /* фиксация нижнего меню */
-	section.second-menu{
-		.switcher {
-/* 			position: fixed;
-			top: 10px;
-			width: 100%;
-			left: 0; */
-		}
-	}
-}
-
 section.second-menu {
 	.switcher {
 		text-align: center;
 		list-style: none;
 		font-family: $P22UndergroundCYPro-Medium;
-		font-size: 1em;
+		font-size: 0;
 		position: relative;
 		width: 1300px;
+		cursor: pointer;
 		.categories {
 			display: inline-table;
-			margin: 0 18px;
+//			margin: 0 18px;
 			cursor: pointer;
 			letter-spacing: .05em;
 			height: 90px;
+			font-size: 16px;
 		}
 		.categories a {
 			position: relative;
 			display: table-cell;
+			padding: 0 18px;
 			vertical-align: middle;
 			text-transform: uppercase;
 			@include transition(color);
@@ -436,7 +426,7 @@ section.second-menu {
 			opacity: 1;
 			background-color: $pinkColor;
 			bottom: -2px;
-			transition-delay: .5s;
+			transition-delay: .25s; // задержка ховера
 		}
 		.content-hovered {
 			width: 992px;
@@ -450,9 +440,10 @@ section.second-menu {
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity .25s ease, top .25s ease;
-			transition-delay: .5s;
+			transition-delay: .25s; // задержка ховера
 			cursor: initial;
 			box-sizing: border-box;
+			box-shadow: 0px 0px 10px 0px rgba(24,24,24,.1);
 			/* display: none; */
 			.by-category {
 				width: 25.58%; /* 220px/860px */
@@ -554,7 +545,7 @@ section.second-menu {
 		.categories:hover .content-hovered {
 			opacity: 1;
 			visibility: visible;
-			top: 91px;
+			top: 90px;
 			display: block;
 		}
 	}
@@ -979,10 +970,10 @@ section.content {
 	}
 	
 	.tile__gallery:hover + dl dt{
-		color: $pinkColorDarker;
+		color: $pinkColor;
 	}
 	dl:hover dt{
-		color: $pinkColorDarker;
+		color: $pinkColor;
 	}
 	
 }
@@ -1167,7 +1158,7 @@ footer {
 			text-align: center;
 			line-height: 55px;
 			position: absolute;
-			top: -29px;
+			top: 25px;
 			right: 83px;
 			opacity: 0;
 			@include transition(all);
@@ -1186,6 +1177,7 @@ footer {
 		}
 		#scroller.is-active {
 			opacity: 1;
+			top: -29px;
 		}
 		p {
 			margin-top: 0;
