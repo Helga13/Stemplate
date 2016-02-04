@@ -151,7 +151,8 @@ figure {
 	margin: 0 auto;
 }
 
-header {
+.header,
+.header-other {
 	color: #fff;
 	background: url(../../prod/img/bg-header.png) no-repeat;
 	background-size: cover;
@@ -175,11 +176,27 @@ header {
 	}
 }
 
-header.header-main .description {
+.header-other {
+	height: 215px;
+	.bg-opacity {
+		height: 215px;
+	}
+}
+
+.header-other .overlay{
+	opacity: 1;
+}
+
+.header.header-main .description {
 	opacity: 0;
 }
 
-header .bg-opacity .wrapper {
+.header-other .description{
+	display: none;
+}
+
+.header .bg-opacity .wrapper,
+.header-other .bg-opacity .wrapper{
 	position: relative;
 	height: 100%;
 	.main-menu {
@@ -191,7 +208,8 @@ header .bg-opacity .wrapper {
 	}	
 }
 
-header {
+.header,
+.header-other{
 	.logo-block,
 	.navbar,
 	.right-icons{
@@ -201,7 +219,8 @@ header {
 	}
 }
 
-header{
+.header,
+.header-other{
 	.logo-from-top{
 		width: 105px;
 		position: fixed;
@@ -215,19 +234,21 @@ header{
 }
 
 
-header.header-main{
+.header.header-main,
+.header-other.header-main{
 	.logo-block.logo-remove{
 		margin-top: -60px;
 		opacity: 0;
 	}
 }
 
-header.header-main.header-fix{
+.header.header.header-main.header-fix,
+.header-other.header-main.header-fix{
 	/* pos+ition: fixed; */
 	/* height: 100px; */
 	/* top: 0; */
 	 .overlay{
-		 position: fixed;
+		position: fixed;
 		height: 100px;
 	} 
 	.switcher{
@@ -236,7 +257,8 @@ header.header-main.header-fix{
 	}
 }
 
-header.header-main.header-fix{
+.header.header-main.header-fix,
+.header-other.header-main.header-fix{
 	.navbar{
 		margin-top: -60px;
 		opacity: 0;
@@ -348,7 +370,7 @@ section.main-menu {
 	}
 }
 
-header.header-main.header-fix{
+.header.header-main.header-fix{
 	section.description {
 	padding-top: 0;
 		height: 0;
@@ -1000,7 +1022,7 @@ section.content {
 		display: inline-block;
 		margin-left: 1.3%;
 		/* 20px/1300px*100% ширина пробела */
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 		vertical-align: top;
 		position: relative;
 		z-index: 0;
@@ -1192,17 +1214,26 @@ footer .logo a{
 }
 
 
-/* popup menu */
+/* popup menu (боковое меню)*/
 
 .popup__overlay {
-	display: none;
+	 /* display: none; */ 
+	width: 0;//new
+	margin-left: -60%;//new
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
+	/* width: 100%; */ 
 	height: 100%;
 	background: rgba(0, 0, 0, .8);
 	z-index: 9999;
+	transition: transform .5s ease;
+}
+
+.popup__overlay.menu-open{
+	 /* display: block; */ 
+	 width: 200%; 
+	transform: translateX(30%);
 }
 
 .popup__overlay:after {
@@ -1219,7 +1250,8 @@ footer .logo a{
 .popup {
 	display: inline-block;
 	position: absolute;
-	width: 30%;
+	/* width: 30%; */
+	width: 10.4%; //new
 	background: $pinkColor;
 	color: #fff;
 	left: 0;
@@ -1295,8 +1327,9 @@ footer .logo a{
 
 /* start page articles, articles-inner */
 
+
 .links {
-	margin: 30px 0;
+	margin: 40px 0 30px;
 	float: left;
 }
 
@@ -1313,7 +1346,7 @@ footer .logo a{
 	font-family: P22UndergroundCYPro-Demi, Arial, sans-serif;
 	@include transition(color);
 	line-height: 30px;
-	margin-right: 28px;
+	margin-right: 25px;
 }
 
 .links li a.active {
@@ -1338,7 +1371,9 @@ footer .logo a{
 	/*50px*/
 	.capitalize {
 		text-transform: capitalize;
-		font-size: 2em;
+		font-size: 2.25em;
+		letter-spacing: normal;
+		margin: 0;
 	}
 }
 
@@ -1359,7 +1394,7 @@ footer .logo a{
 	text-transform: uppercase;
 	font-family: $P22UndergroundCYPro-Demi;
 	font-size: 1.5em;
-	line-height: 1.33em;
+	line-height: 1.35em;
 	letter-spacing: 0.05em;
 	padding: 1.75em 0;
 }
@@ -1413,9 +1448,9 @@ footer .logo a{
 	float: right;
 	font-family: $P22UndergroundCYPro-Medium;
 	line-height: 1.5em;
-	letter-spacing: 0.025em;
+	letter-spacing: 0.05em;
 	/*24px (1em=16px)*/
-	padding: 50px 0;
+	padding: 45px 0;
 }
 
 .left-text {
@@ -1428,7 +1463,7 @@ footer .logo a{
 		padding-left: 220px;
 		font-weight: bold;
 		font-size: 1.125em;
-		line-height: 1.75em;
+		line-height: 1.6em;
 	}
 }
 
@@ -1438,7 +1473,7 @@ footer .logo a{
 	float: right;
 	p {
 		font-size: 1.125em;
-		line-height: 28px;
+		line-height: 1.6em;
 		padding-bottom: 10px;
 	}
 }
@@ -1448,28 +1483,34 @@ footer .logo a{
 	/*530px/970px*100%*/
 	float: right;
 	height: 30px;
-	padding: 40px 0;
+	padding: 40px 0 60px;
 }
 
 .loading {
 	font-family: $P22UndergroundCYPro-Demi;
 	font-size: 2.250em;
 	color: $pinkColor;
-	margin-left: 1.25%;
+	/* margin-left: 1.25%; */
 	text-align: center;
-	padding: 40px 0;
+	padding: 40px 0 50px;
 }
 
 
 /* start catalog content */
 
+.catalog{
+	margin-bottom: 0;
+}
+
 .catalog_content {
 	@include clearfix;
 	margin-right: -1.25%;
+	margin-bottom: 50px;
 }
 
 .catalog_content .item-wrap {
 	width: 23.5% !important;
+	margin-bottom: 50px;
 	a {
 		position: absolute;
 		top: 0;
@@ -1477,6 +1518,12 @@ footer .logo a{
 		height: 100%;
 		width: 100%;
 		z-index: 5;
+	}
+	a +.img-wrap + dl dt{ 
+		@incluge transition(color);
+	}
+	a:hover +.img-wrap + dl dt{
+		color: $pinkColor;
 	}
 }
 
@@ -1486,7 +1533,16 @@ footer .logo a{
 .sort-block {
 	width: 23.5%;
 	float: right;
-	margin: 30px 0;
+	margin: 38px 0 30px;
+}
+
+.sort-block .ms-parent .select-sort:hover .ms-choice{
+	color: $pinkColorDarker;
+}
+
+.sort-block .ms-choice,
+.sort-block .ms-drop{
+	font-family: $P22UndergroundCYPro-Demi;
 }
 
 .sort-block span > em {
@@ -1494,66 +1550,6 @@ footer .logo a{
 	line-height: 30px;
 }
 
-.sort-list {
-	width: auto;
-	color: $mainDarkColor;
-	font-family: $P22UndergroundCYPro-Demi;
-	font-size: 12px;
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-}
-
-.sort-list .sort-by {
-	cursor: pointer;
-	color: $pinkColor;
-	width: 100%;
-	z-index: 11;
-}
-
-.sort-list .sort-by.sort-by_dark {
-	color: $mainDarkColor;
-}
-
-.sort-by .arr-down {
-	width: 10px;
-	height: 10px;
-	float: right;
-	padding-top: 3px;
-}
-
-.sort-by span {
-	padding-right: 5px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.sort-by span:hover {
-	color: $pinkColorDarker;
-}
-
-.sort-by:hover .arr-down polygon,
-.sort-by.sort-by_dark:hover .arr-down polygon {
-	fill: $pinkColorDarker;
-}
-
-.sort-list ul.sort-dropdown {
-	z-index: 10;
-	background: #fff;
-	position: absolute;
-	padding: 20px 30px;
-	display: none;
-	border-top: 10px solid #ebebeb;
-}
-
-ul.sort-dropdown li {
-	line-height: 35px;
-}
-
-ul.sort-dropdown li:hover {
-	cursor: pointer;
-	color: $pinkColor;
-}
 
 
 /* end sort by доработать!*/
@@ -2323,12 +2319,12 @@ li.srch-block {
 }
 
 .accordion >:checked + label {
-	cursor: default;
+	/* cursor: pointer; */
 	color: $pinkColor;
 }
 
 .accordion > label:hover {
-	cursor: default;
+	/* cursor: pointer; */
 	color: $pinkColorDarker;
 	border-bottom: 1px solid $pinkColorDarker;
 }
@@ -2342,7 +2338,7 @@ li.srch-block {
 	box-sizing: border-box;
 	h3{
 		padding: 0;
-		font-size: 24px;
+		font-size: 1.5em;
 	}
 	h3 + p{
 		padding: 30px 0 40px;
@@ -2629,16 +2625,16 @@ li.srch-block {
 	position: relative;
 	h3{
 		padding: 0 0 15px;
-		font-size: 24px;
+		font-size: 1.5em;
 	}
 	ol li{
 		list-style: decimal;
 		list-style-position: inside;
 		font-family: $P22UndergroundCYPro-Demi;
 		letter-spacing: 0.1em;
-		line-height: 22px;
+		line-height: 1.85em;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 0.75em;
 		padding-top: 10px;
 	}
 }
