@@ -1536,7 +1536,32 @@ footer .logo a{
 	margin: 38px 0 30px;
 }
 
-.sort-block .ms-parent .select-sort:hover .ms-choice{
+.sort-block > span{
+	float: left;
+}
+
+.sort-block > div{
+	width: 70%;
+	float: left;
+}
+
+.sort-block .ms-parent.select-sort:hover .ms-choice{
+	color: $pinkColorDarker;
+}
+
+.sort-block .ms-parent.select-sort:hover .ms-choice > div{
+	background: url('../img/svg/arrow-other-hover.svg') left top no-repeat;
+}
+
+.sort-block .ms-parent.select-sort:hover .ms-choice > div.open{
+	background: url('../img/svg/arrow-pink-dark.svg') left top no-repeat;
+}
+
+.ms-drop ul > li.selected {
+	color: $pinkColor;
+}
+
+.ms-drop ul > li:hover {
 	color: $pinkColorDarker;
 }
 
@@ -2239,95 +2264,115 @@ li.srch-block {
 }
 
 .accordion {
-	width: 61.5%;
+/* 	width: 61.5%;
+	800px/1300px
+	margin-bottom: 180px;
+	margin-right: 7.69%;
+	float: left; */
+}
+
+.accordions{
+width: 61.5%;
 	/* 800px/1300px */
 	margin-bottom: 180px;
 	margin-right: 7.69%;
 	float: left;
 }
 
-.accordion [name="vkl"] {
-	display: none;
-}
+/* accordion */
 
-.accordion input[type=radio]+label{
-	margin: 0;
-}
-
-.accordion >:not(input):not(label) {
-	overflow: hidden;
-	height: 0;
-	margin: 0;
-	transition: .25s;
-}
-
-.accordion > label {
-	text-transform: uppercase;
-	font-family: $P22UndergroundCYPro-Medium;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.05em;
-	overflow: hidden;
-	display: block;
-	padding: 15px 10px 7px 0;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	cursor: pointer;
-	border-bottom: 1px solid #d2d2d2;
+.accord {
 	position: relative;
+	margin-bottom: 30px;
+	.accord__but {
+		text-transform: uppercase;
+		font-family: $P22UndergroundCYPro-Medium;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.05em;
+		overflow: hidden;
+		display: block;
+		padding: 0 20px 4px 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		cursor: pointer;
+		border-bottom: 1px solid #d2d2d2;
+		position: relative;
+		transition: color 0.25s ease, border 0.25s ease;
+		.icon {
+			width: 12px;
+			height: 9px;
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			right: 0;
+			transform: translate3d(0, 0, 0);
+			&::after {
+				content: '';
+				height: 1px;
+				width: 7px;
+				transition: transform 0.25s ease, background-color 0.25s ease;
+				top: 0;
+				left: 0;
+				transform: rotate(45deg);
+				background-color: #181818;
+				position: absolute;
+			}
+			&::before {
+				content: '';
+				height: 1px;
+				width: 7px;
+				transition: transform 0.25s ease, background-color 0.25s ease;
+				top: 0;
+				right: 0;
+				transform: rotate(-45deg);
+				background-color: #181818;
+				position: absolute;
+			}
+		}
+		&:hover {
+			border-bottom: 1px solid $pinkColorDarker;
+			color: $pinkColorDarker;
+			.icon {
+				&::after {
+					background-color: $pinkColorDarker;
+				}
+				&::before {
+					background-color: $pinkColorDarker;
+				}
+			}
+		}
+	}
+	.accord__block {
+		display: none;
+		padding: 20px 20px 20px 0;
+		line-height: 22px;
+		
+	}
+	&.is-active {
+		
+		.accord__but {
+			color: $pinkColor;
+			/* background-color: #fff; */
+			.icon {
+				&::after {
+					transform: rotate(-45deg);
+					background-color: $pinkColor;
+				}
+				&::before {
+					transform: rotate(45deg);
+					background-color: $pinkColor;
+				}
+			}
+		}
+	}
 }
 
-.accordion > label:nth-last-child(2),          /* убирает нижний бордер у */ 
-.accordion > label:hover:nth-last-child(2){    /* последнего элемента */
-	border: none;
-}
+.accord:last-child > .accord__but{ 
+			border-bottom: none;
+		}
 
-.accordion > label::after {
-	content: '';
-	position: absolute;
-	height: 10px;
-	width: 10px;
-	background: transparent url('../../prod/img/svg/arrow-other-grey.svg') no-repeat center center;
-	right: 0;
-    top: 20px;
-}
-.accordion > label:hover::after {
-	content: '';
-	position: absolute;
-	height: 10px;
-	width: 10px;
-	background: transparent url('../../prod/img/svg/arrow-other-hover.svg') no-repeat center center;
-	right: 0;
-    top: 20px;
-}
-
-.accordion >:checked + label::after {
-	content: '';
-	position: absolute;
-	height: 10px;
-	width: 10px;
-	background: transparent url('../../prod/img/svg/arrow-pink.svg') no-repeat center center;
-	right: 0;
-    top: 20px;
-}
-
-.accordion >:checked + label + div {
-	overflow: auto;
-	height: auto;
-	padding: 20px 0;
-	line-height: 22px;
-}
-
-.accordion >:checked + label {
-	/* cursor: pointer; */
-	color: $pinkColor;
-}
-
-.accordion > label:hover {
-	/* cursor: pointer; */
-	color: $pinkColorDarker;
-	border-bottom: 1px solid $pinkColorDarker;
-}
+/* end accordion */
 
 .have-questions,
 .your-payment{
@@ -2339,6 +2384,7 @@ li.srch-block {
 	h3{
 		padding: 0;
 		font-size: 1.5em;
+		letter-spacing: .1em;
 	}
 	h3 + p{
 		padding: 30px 0 40px;

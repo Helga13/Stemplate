@@ -188,7 +188,8 @@ $(document).ready(function () {
 	
 	
     $('select.select-sort').multipleSelect({
-		single:true
+		single:true,
+		width:'100%'
 	});
     
 	
@@ -282,17 +283,33 @@ $(document).ready(function () {
 	});
 	
 	
-	// аккордtон faq
+	// accorgion faq	
 	
-	//$('.accordion label').click(function(){
-		//if($(this).siblings('input').prop('checked')){
-		//if($(this).siblings('div').css({'height': 'auto', 'overflow': 'auto'})){
-			//console.log($(this).siblings('input').attr('checked'));
-			//$(this).siblings('div').css({'height': '0', 'overflow': 'hidden', 'padding': '0'});
-			//$(this).siblings('div').slideUp();
-		//}
-		
-	//});
+	(function(){
+		$('.accordions').each(function(){
+			$('.js-accord-but').on('click', function() {
+				var this_ 		= $(this),
+					parent 		= this_.parents('.js-accord'),
+					blockThis 	= parent.find('.js-accord-block'),
+					accord 		= $('.js-accord'),
+					block 		= accord.find('.js-accord-block');
+				
+				if (!parent.hasClass('is-active')) {
+					accord.stop(true, true).removeClass('is-active');
+					block.stop(true, true).slideUp(500);
+					parent.stop(true, true).addClass('is-active');
+					blockThis.stop(true, true).slideDown(500);
+				}
+				else {
+					parent.stop(true, true).removeClass('is-active');
+					blockThis.stop(true, true).slideUp(500);
+				}
+				return false;
+			 });
+			
+		});
+	})();
+	
 	
 	// search field
 	

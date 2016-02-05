@@ -31,7 +31,7 @@
 	color: #181818;
 	font-size: 12px;
 	letter-spacing: .1em;
-	line-height: 29px;
+	line-height: 35px;
 }
 
 .ms-choice.disabled {
@@ -42,15 +42,16 @@
 }
 
 .ms-choice > span {
-    position: absolute;
+    /* position: absolute; */
+    position: relative; /* custom */
 	text-transform: uppercase; /* custom */
-    top: 0;
-    left: 0;
-    right: 20px;
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 20px; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: block;
+    /* display: block; */
     /* padding-left: 8px; */
 }
 
@@ -59,16 +60,20 @@
 }
 
 .ms-choice > div {
-    position: absolute;
-    top: 10px;
+    /* position: absolute; */
+	/* top: 10px; */
     right: 0;
     width: 10px;
     height: 10px;
-    background: url('../img/svg/arrow-other-grey.svg') left top no-repeat;
+    background: url('../img/svg/arrow-other-black.svg') left top no-repeat;
+	position: relative;  /* custom */
+	display: inline-block;
+	top: 2px;
+	margin-left: 7px;
 }
 
 .ms-choice > div.open {
-    background: url('../img/svg/arrow-pink.svg') right top no-repeat;
+    background: url('../img/svg/arrow-black.svg') right top no-repeat;
 }
 
 .ms-drop {
@@ -95,6 +100,7 @@
 
 .ms-drop.bottom {
     top: 100%;
+	margin-top: 5px; /* custom */
     /* -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15); */
     /* -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15); */
     /* box-shadow: 0 4px 5px rgba(0, 0, 0, .15); */
