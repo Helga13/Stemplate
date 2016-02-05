@@ -106,19 +106,47 @@ $(document).ready(function () {
 	});
 	
 	// открытие меню по ховеру
-	
 	//$('.categories').hover(function (e) {
 	//	e.preventDefault();
-	//	$('.content-hovered').removeClass('tab-link_active');
-	//	$(this).addClass('tab-link_active');
-	//	var tab = $(this).attr('href');
-	//	$('.tab-content').not(tab).css({
-	//		'display': 'none'
-	//	});
-	//	$(tab).fadeIn(300);
-
-	//});
-
+	//	$(this).removeClass('content-hovered_active');
+	//	$(this).addClass('content-hovered_active');
+	
+	//},function(){
+	//	$(this).removeClass('content-hovered_active');
+	//}); 
+	
+	$('.categories').hover(function (e) {
+		
+		window.initHandler = setTimeout( handler, 250 );
+		var $this = this;
+		
+		//console.log( $this );
+		function handler() {
+			$($this).removeClass('content-hovered_active');
+			$($this).addClass('content-hovered_active');
+		}
+		//$(this).removeClass('content-hovered_active');
+		//$(this).addClass('content-hovered_active');
+	}, function () {
+		clearTimeout( window.initHandler );
+		$('.categories').removeClass('content-hovered_active');
+	}); 
+	
+	
+	//var timer;
+    //$(".categories").hover(function (){
+    //        $(this).removeClass('content-hovered_active');
+	//		$(this).addClass('content-hovered_active');
+    //    },function(){
+   // //        timer = setTimeout(function(){$('#submenu').hide();}, 5000);
+    //    });
+//
+    //$("#submenu").hover(function (){
+    //        clearTimeout(timer);
+    //    },function(){
+    //        $('#submenu').show();
+    //    });
+	
 
 
 	// переход по табам

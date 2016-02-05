@@ -443,13 +443,13 @@ section.second-menu {
 		.categories:hover > a {
 			color: $pinkColor;
 		}
-		.categories:hover > a::after {
+		/* .categories:hover > a::after {
 			content: "";
 			opacity: 1;
 			background-color: $pinkColor;
 			bottom: -2px;
 			transition-delay: .25s; // задержка ховера
-		}
+		} */
 		.content-hovered {
 			width: 992px;
 			padding: 50px 65px;
@@ -564,11 +564,25 @@ section.second-menu {
 				line-height: 2.25em;
 			}
 		}
-		.categories:hover .content-hovered {
+/* 		.categories:hover .content-hovered {
 			opacity: 1;
 			visibility: visible;
 			top: 90px;
 			display: block;
+		} */
+		.categories.content-hovered_active .content-hovered{
+			opacity: 1;
+			visibility: visible;
+			top: 90px;
+			display: block;
+		}
+		
+		.categories.content-hovered_active > a::after {
+			content: "";
+			opacity: 1;
+			background-color: $pinkColor;
+			bottom: -2px;
+			transition-delay: .25s; // задержка ховера
 		}
 	}
 }
