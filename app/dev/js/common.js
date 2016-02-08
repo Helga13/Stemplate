@@ -106,6 +106,8 @@ $(document).ready(function () {
 	});
 	
 	// открытие меню по ховеру
+	
+	
 	//$('.categories').hover(function (e) {
 	//	e.preventDefault();
 	//	$(this).removeClass('content-hovered_active');
@@ -120,35 +122,43 @@ $(document).ready(function () {
 		window.initHandler = setTimeout( handler, 250 );
 		var $this = this;
 		
-		//console.log( $this );
 		function handler() {
 			$($this).removeClass('content-hovered_active');
 			$($this).addClass('content-hovered_active');
 		}
-		//$(this).removeClass('content-hovered_active');
-		//$(this).addClass('content-hovered_active');
 	}, function () {
 		clearTimeout( window.initHandler );
 		$('.categories').removeClass('content-hovered_active');
 	}); 
 	
+	//-------------------------------------------------------------------------
+	// новое меню
 	
-	//var timer;
-    //$(".categories").hover(function (){
-    //        $(this).removeClass('content-hovered_active');
-	//		$(this).addClass('content-hovered_active');
-    //    },function(){
-   // //        timer = setTimeout(function(){$('#submenu').hide();}, 5000);
-    //    });
+//	$('.menu__btn').hover(function (e) {
+//		e.preventDefault();
+//		$('a').removeClass('is-active');
+//		$(this).addClass('is-active');
+//		
+//		$(this).parent().parent().addClass('is-open');
+//		
+//		var tab = $(this).attr('href');
+//		$('.menu__tab').not(tab).css({
+//			'display': 'none'
+//		});
+//		$(tab).fadeIn(300);
 //
-    //$("#submenu").hover(function (){
-    //        clearTimeout(timer);
-    //    },function(){
-    //        $('#submenu').show();
-    //    });
+//	},function(){
+//		$(this).removeClass('is-active');
+//		$('.menu').removeClass('is-open');
+//		
+//	});
+
+
 	
-
-
+	
+	
+	//-------------------------------------------------------------------------
+	
 	// переход по табам
 
 	$('.tab a').click(function (e) {

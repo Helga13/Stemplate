@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=1024">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
-	<title>Stemplate - 4-1basket</title>
+	<title>Stemplate - 4-1basket-account</title>
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
 	<link rel="stylesheet" href="prod/css/lib.css">
 	<link rel="stylesheet" href="prod/css/multiple-select.css">
@@ -738,9 +738,6 @@
 
 							<div class="contact-details">
 							<p>1. contact details</p>
-						  	<div class="login-for-checkout">
-						  	<em>Already registered? Please <a href="#">Login</a> for a faster checkout</em>
-						  </div>
 							  <label for="contact-name" required><em>First and last name</em><span class="required-field">*</span></label>
 							  <input id="contact-name" type="" name="" value="">
 							  <label for="contact-mail" required><em>E-mail</em><span class="required-field">*</span></label>
@@ -752,8 +749,8 @@
 							  
 							 	<input id="accept-the terms" type="checkbox" name='choosebox1'/>
 								<label for="accept-the terms"><span></span>Accept the terms of the <a href="#" class="contract-offer">contract offer</a></label>
-								<input id="subscribe-news" type="checkbox" name='choosebox2'/>
-								<label for="subscribe-news"><span></span>Subscribe to our news</label>
+<!--								<input id="subscribe-news" type="checkbox" name='choosebox2'/>
+									<label for="subscribe-news"><span></span>Subscribe to our news</label>-->
 							  	
 							  </div>
 							
@@ -776,7 +773,19 @@
 							<label for="webmoney"><span></span><img src="prod/img/payment-icons/webmoney.png" alt=""></label>
 							<input id="qiwi" type="radio" name='choose-payment'/>
 							<label for="qiwi"><span></span><img src="prod/img/payment-icons/qiwi.png" alt=""></label>
+							<input id="mts" type="radio" name='choose-payment'/>
+							<label for="mts"><span></span><img src="prod/img/payment-icons/mts.png" alt=""></label>
+							<input id="megafon" type="radio" name='choose-payment'/>
+							<label for="megafon"><span></span><img src="prod/img/payment-icons/megafon.png" alt=""></label>
+							<input id="beeline" type="radio" name='choose-payment'/>
+							<label for="beeline"><span></span><img src="prod/img/payment-icons/beeline.png" alt=""></label>
+							<input id="americanexpress" type="radio" name='choose-payment'/>
+							<label for="americanexpress"><span></span><img src="prod/img/payment-icons/americanexpress.png" alt=""></label>
+							<input id="jcb" type="radio" name='choose-payment'/>
+							<label for="jcb"><span></span><img src="prod/img/payment-icons/jcb.png" alt=""></label>
 							
+							
+<!--
 							<p class="show-all">
                				<a href="#" class="leave-review" id="#">Show all payment</a>&nbsp;
                				<i class="caret"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 266.5 153.1" enable-background="new 0 0 266.5 153.1" xml:space="preserve">
@@ -796,6 +805,30 @@
 	</g>
 </g>
 </svg></i>
+               			</p>
+-->
+						
+						<p class="show-all collapse">
+               				<a href="#" class="leave-review" id="#">Сollapse the list</a>&nbsp;
+               				<i class="caret"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 266.5 153.1" enable-background="new 0 0 266.5 153.1" xml:space="preserve">
+<g display="none">
+	<g display="inline">
+		<polygon fill="#181818" points="134.4,2.1 0,134.1 16.8,151 148.8,18.9 		"/>
+	</g>
+</g>
+<g display="none">
+	<g display="inline">
+		<polygon fill="#181818" points="134.4,2.1 117.6,21.3 249.7,151 266.5,134.1 		"/>
+	</g>
+</g>
+<g>
+	<g>
+		<polygon fill="#FF0078" points="266.5,136.5 148.8,18.9 134,3.6 0,134.1 16.8,151 134.4,35.7 249.7,151 		"/>
+	</g>
+</g>
+</svg>
+</i>
                			</p>
 							
 							</div>
