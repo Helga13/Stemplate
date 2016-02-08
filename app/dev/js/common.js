@@ -424,6 +424,40 @@ $(document).ready(function () {
 //		errorMessagePosition : 'top'
 //	});
 	
+	//FORM VALIDATOR
+
+
+	(function(){
+		var form_validate = $('.js-validate'),
+			success = $('.contact-form_success'),
+			forms = $('.contact-form');
+		if (form_validate.length) {
+			form_validate.each(function () {
+				var form_this = $(this);
+				$.validate({
+					form : form_this,
+					borderColorOnError : true,
+					scrollToTopOnError : false,
+					onValidate: function($form){
+
+					},
+					onSuccess: function($form){
+						if ($form.hasClass('is-active')){
+							removes(forms, success);
+						}
+						
+						return false;
+					}
+				});
+			});
+		};
+	})();
+
+	function removes(forms, success) {
+		forms.removeClass('is-active');
+		success.addClass('is-active');
+	};
+	
 
 
 });

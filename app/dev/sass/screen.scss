@@ -2340,7 +2340,8 @@ li.srch-block {
 /* faq  */
 
 .faq_content,
-.feedback_content{
+.feedback_content,
+.personal-information{
 	@include clearfix;
 }
 
@@ -3027,7 +3028,8 @@ input[type="checkbox"]:checked + label span::after {
 
 /* feedback */
 
-.feedback_content{
+.feedback_content,
+.personal-information{
 	margin-bottom: 100px;
 }
 
@@ -3069,7 +3071,7 @@ input[type="checkbox"]:checked + label span::after {
 	}
 	button{
 		width: 305px;
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 }
 
@@ -3100,13 +3102,14 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 .contact-form > .row > div:first-child input:last-child,
-.contact-form > .row > div:last-child input:last-child{
+.contact-form > .row > div:last-child input:last-child,
+.contact-form > .row > div:last-child textarea:last-child{
 	margin-bottom: 0;
 }
 
-.contact-form > .row > div:last-child input:last-child{
-	height: 131px;
-}
+//.contact-form > .row > div:last-child input:last-child{
+//	height: 131px;
+//}
 
 .contact-form textarea{
 	height: 131px;
@@ -3142,6 +3145,55 @@ input[type="checkbox"]:checked + label span::after {
 
 .feedback_content .detail p > em{
 	color: #979797;
+}
+
+
+/* personal */
+
+.exit{
+	display: inline-block;
+	height: 17px; 
+	text-transform: uppercase;
+	float: right;
+	margin: 40px 0 30px;
+	margin-right: 38.08%;
+	color: $mainDarkColor;
+	font-family: $P22UndergroundCYPro-Demi;
+	font-size: 0.75em;
+	letter-spacing: .1em;
+	@include transition(color);
+	svg{
+		height: 100%;
+		position: relative;
+		top: 4px;
+		@include transition(fill);
+	}
+	path{
+		@include transition(fill);
+	}
+}
+.exit:hover{
+	color: $pinkColorDarker;
+	svg path{
+		fill: $pinkColorDarker;
+	}
+}
+
+
+// form validation success message (not popup)
+
+.contact-form.is-active,
+.contact-form.contact-form_success.is-active{
+	display: block;
+}
+
+.contact-form,
+.contact-form.contact-form_success{
+	display: none;
+}
+
+.contact-form.contact-form_success > .row > *{
+	text-align: left !important;
 }
 
 /* menu ------------------------------- */
