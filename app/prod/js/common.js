@@ -106,6 +106,8 @@ $(document).ready(function () {
 	});
 	
 	// открытие меню по ховеру
+	// работает!
+	
 	//$('.categories').hover(function (e) {
 	//	e.preventDefault();
 	//	$(this).removeClass('content-hovered_active');
@@ -115,40 +117,96 @@ $(document).ready(function () {
 	//	$(this).removeClass('content-hovered_active');
 	//}); 
 	
+	
+	$('.switcher').hover(function () {
+		
+		/* Курсор мыши зашел в область навигации */
+		
+		var switcher = $(this).removeClass("out");
+		
+		setTimeout(function() {
+    	switcher.addClass("is-open");
+  	}, 400);
+
+	}, function () {
+		/* Потеря фокуса */
+  		$(this)
+			.addClass("out")
+			.removeClass("is-open");
+
+	});
+	
+	
+	
 	$('.categories').hover(function (e) {
-		
-		window.initHandler = setTimeout( handler, 250 );
 		var $this = this;
+		//------------------------------------------------
+		if($('.switcher').hasClass('is-open')){
+			window.initHandler = setTimeout( handler, 0 );
+		}else{
+			window.initHandler = setTimeout( handler, 250 );
+		}
+		//------------------------------------------------
+		//window.initHandler = setTimeout( handler, 250 );
+		//var $this = this;
 		
-		//console.log( $this );
 		function handler() {
 			$($this).removeClass('content-hovered_active');
 			$($this).addClass('content-hovered_active');
 		}
-		//$(this).removeClass('content-hovered_active');
-		//$(this).addClass('content-hovered_active');
 	}, function () {
 		clearTimeout( window.initHandler );
 		$('.categories').removeClass('content-hovered_active');
 	}); 
 	
 	
-	//var timer;
-    //$(".categories").hover(function (){
-    //        $(this).removeClass('content-hovered_active');
-	//		$(this).addClass('content-hovered_active');
-    //    },function(){
-   // //        timer = setTimeout(function(){$('#submenu').hide();}, 5000);
-    //    });
-//
-    //$("#submenu").hover(function (){
-    //        clearTimeout(timer);
-    //    },function(){
-    //        $('#submenu').show();
-    //    });
+	
+	//$('.switcher').hover(function (e) {
+	//	
+	//	window.initHandler = setTimeout( handler, 400 );
+	//	var $this = this;
+	//	
+	//	function handler() {
+	//		$($this).removeClass('is-open');
+	//		$($this).addClass('is-open');
+	//	}
+	//}, function () {
+	//	clearTimeout( window.initHandler );
+	//	$('.switcher').removeClass('is-open');
+	//});
+	
 	
 
+	
+	
+	//-------------------------------------------------------------------------
+	// новое меню
+	
+//	$('.menu__btn').hover(function (e) {
+//		e.preventDefault();
+//		$('a').removeClass('is-active');
+//		$(this).addClass('is-active');
+//		
+//		$(this).parent().parent().addClass('is-open');
+//		
+//		var tab = $(this).attr('href');
+//		$('.menu__tab').not(tab).css({
+//			'display': 'none'
+//		});
+//		$(tab).fadeIn(300);
+//
+//	},function(){
+//		$(this).removeClass('is-active');
+//		$('.menu').removeClass('is-open');
+//		
+//	});
 
+
+	
+	
+	
+	//-------------------------------------------------------------------------
+	
 	// переход по табам
 
 	$('.tab a').click(function (e) {
@@ -358,6 +416,14 @@ $(document).ready(function () {
 		}
 
 	});
+	
+	// валидация форм
+	
+//	$.validate({
+//		form : '#customer-info',
+//		errorMessagePosition : 'top'
+//	});
+	
 
 
 });

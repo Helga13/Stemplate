@@ -106,7 +106,7 @@ $(document).ready(function () {
 	});
 	
 	// открытие меню по ховеру
-	
+	// работает!
 	
 	//$('.categories').hover(function (e) {
 	//	e.preventDefault();
@@ -117,10 +117,38 @@ $(document).ready(function () {
 	//	$(this).removeClass('content-hovered_active');
 	//}); 
 	
-	$('.categories').hover(function (e) {
+	
+	$('.switcher').hover(function () {
 		
-		window.initHandler = setTimeout( handler, 250 );
+		/* Курсор мыши зашел в область навигации */
+		
+		var switcher = $(this).removeClass("out");
+		
+		setTimeout(function() {
+    	switcher.addClass("is-open");
+  	}, 400);
+
+	}, function () {
+		/* Потеря фокуса */
+  		$(this)
+			.addClass("out")
+			.removeClass("is-open");
+
+	});
+	
+	
+	
+	$('.categories').hover(function (e) {
 		var $this = this;
+		//------------------------------------------------
+		if($('.switcher').hasClass('is-open')){
+			window.initHandler = setTimeout( handler, 0 );
+		}else{
+			window.initHandler = setTimeout( handler, 250 );
+		}
+		//------------------------------------------------
+		//window.initHandler = setTimeout( handler, 250 );
+		//var $this = this;
 		
 		function handler() {
 			$($this).removeClass('content-hovered_active');
@@ -130,6 +158,26 @@ $(document).ready(function () {
 		clearTimeout( window.initHandler );
 		$('.categories').removeClass('content-hovered_active');
 	}); 
+	
+	
+	
+	//$('.switcher').hover(function (e) {
+	//	
+	//	window.initHandler = setTimeout( handler, 400 );
+	//	var $this = this;
+	//	
+	//	function handler() {
+	//		$($this).removeClass('is-open');
+	//		$($this).addClass('is-open');
+	//	}
+	//}, function () {
+	//	clearTimeout( window.initHandler );
+	//	$('.switcher').removeClass('is-open');
+	//});
+	
+	
+
+	
 	
 	//-------------------------------------------------------------------------
 	// новое меню
@@ -368,6 +416,14 @@ $(document).ready(function () {
 		}
 
 	});
+	
+	// валидация форм
+	
+//	$.validate({
+//		form : '#customer-info',
+//		errorMessagePosition : 'top'
+//	});
+	
 
 
 });
