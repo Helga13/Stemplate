@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=1024">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
-	<title>Stemplate - feedback</title>
+	<title>Stemplate - account</title>
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
 	<link rel="stylesheet" href="prod/css/lib.css">
 	<link rel="stylesheet" href="prod/css/multiple-select.css">
@@ -594,95 +594,123 @@
 				<h1 class="capitalize">feedback</h1>
 				<div class="row">
 					<ul class="links">
-						<li><a href="#">articles</a></li>
-						<li><a href="#">faq</a></li>
-						<li><a href="#" class="active">feedback</a></li>
+						<li><a href="#" class="active">my orders</a></li>
+						<li><a href="#">personal information</a></li>
 					</ul>
+					
+					<a href="#" class="exit">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="52 0 161.4 153.1" enable-background="new 52 0 161.4 153.1" xml:space="preserve">
+<path fill="#181818" d="M97.2,36V9c0,0,0.8-9,9.9-9c9.9,0,98.1,0,98.1,0s8.1,0,8.1,9s0,132.4,0,132.4s1.4,11.7-8.1,11.7
+	c-7.2,0-99,0-99,0s-9,0-9-11.7c0-9,0-24.3,0-24.3h9v27h99V9h-99v27H97.2z"/>
+<path fill="#181818" d="M64.8,72h64.8c1.8,0,3.6,1.8,3.6,3.6v1.8c0,1.8-1.8,3.6-3.6,3.6H64.8c-1.8,0-3.6-1.8-3.6-3.6v-1.8
+	C61.2,73.8,63,72,64.8,72z"/>
+<path fill="#181818" d="M54,71.1l23.4-23.4c2.7-2.7,6.3-2.7,9,0c2.7,2.7,2.7,6.3,0,9L63,80.1c-2.7,2.7-6.3,2.7-9,0
+	C51.3,77.4,51.3,72.9,54,71.1z"/>
+<path fill="#181818" d="M86.4,93.6L63,71.1c-2.7-2.7-6.3-2.7-9,0c-2.7,2.7-2.7,6.3,0,9l23.4,23.4c2.7,2.7,6.3,2.7,9,0
+	C89.1,100.8,89.1,96.3,86.4,93.6z"/>
+</svg> 
+				<span>exit</span>
+					</a>
 				</div>
 
-				<div class="feedback_content">
-				
-				<ul class="contact-list">
-					<li>
-						<dl>
-							<dt>Phone for consultations</dt>
-							<dd>
-								<p>+375 29 795-56-56</p>
-								<p>+375 44 555-47-01</p>
-							</dd>
-						</dl>	
-					</li>
-					<li>
-						<dl>
-							<dt>Schedule</dt>
-							<dd>Daily: from 09<sup>00</sup> to 19<sup>00</sup></dd>
-						</dl>
-					</li>
-					<li>
-						<dl>
-							<dt>By selecting a product</dt>
-							<dd>
-								<a href="mailto:zakaz@stemplate.com">zakaz@stemplate.com</a>
-							</dd>
-						</dl>
-					</li>
-					<li>
-						<dl>
-							<dt>Сooperation</dt>
-							<dd>
-								<a href="mailto:partner@stemplate.com">partner@stemplate.com</a>
-							</dd>
-						</dl>	
-					</li>
-					<li>
-						<dl>
-							<dt>Skype</dt>
-							<dd><a href="#">stemplate.com</a></dd>
-						</dl>
-					</li>
-				</ul>
+				<div class="my-orders">
 
+					
+						<div class="accordions js-accordions-mod">
 
-					<form class="contact-form is-active">
-						<h2>contact details</h2>
-						<p><em>If you have any concerns or questions, don’t hesitate to contact us. Drop us a line anyway.</em></p>
-						<div class="row">
-
-							<div>
-								<label for="contact-name"><em>First and last name</em><span class="required-field">*</span></label>
-								<input id="contact-name" type="" name="name" value="" required>
-								<label for="contact-mail"><em>E-mail</em><span class="required-field">*</span></label>
-								<input id="contact-mail" type="email" required="required" data-validation-error-msg-required="Incorrect e-mail. Please try again" name="email" value="">
+						<div class="accord js-accord">
+							<div class="table-header">
+								<div class="th"><em>Order №</em></div>
+								<div class="th"><em>Date</em></div>
+								<div class="th"><em>Status</em></div>
+								<div class="th"><em>Prise</em></div>
+								<div class="th"></div>
+								<div class="th"></div>
+							</div>		
+							<div class="accord__but js-accord-but">
+								<div class="th">747878</div>
+								<div class="th">Delivered</div>
+								<div class="th">€1204</div>
+								<div class="th">
+									<a href="#" value="" type="button" class="resend_parrern">
+								<p>resend parrern</p>
+							</a>
+								</div>
+								<div class="th"></div>
+								<div class="th"><i class="icon"></i></div>	
 							</div>
-
-							<div>
-								<label for="message"><em>Message<span class="required-field">*</span></em></label>
-<!--								<input id="message" type="text" name="message" value="" required>-->
-								<textarea id="message" type="text" name="message" value="" required></textarea>
-							</div>	
-
-						</div>
-						<button value="" type="button" class="save_button">
-							<p>save</p>
-						</button>
-
-					</form>
-
-
-					<div class="detail">
-						<h3>detail</h3>
-						<p><strong>LLC "Stemplate"</strong></p>
-						<p><strong>UNP: 191523880</strong></p>
-						<p><strong>220136, Minsk, Burdein str., 39-99</strong></p> 
-						<p>Number in the commercial registry: 205645</p>
-						<p>Registration number usr: 191523880</p>
-						<p>Bank details: a/c: 3012156649012 in JSC <br>"BPS-Sberbank", RD # 700, Minsk, Avenue <br>Masherova str., 80, 369 code</p>
-						<p><em>Registered in the commercial register of the Republic of Belarus No. 1103 dated 17.07.2014</em></p>
+							<div class="accord__block js-accord-block">
+													<div class="cart-block">
 						
+						<div class="cart-table">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<div class="img-wrap">
+												<img src="prod/img/catalog-inner/temp1.jpg" alt="" class="">
+											</div>
+											<p><a href="#" class="">sewing template of SWEATSHIRT WITH DRAPED BACK</a></p>
+											<span><em>Size: S</em></span>
+										</td>
+										<td>Code: 1165/241</td>
+										<td>&euro;9</td>
+										<td>
+											<a href="#"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M0,1.6L1.6,0L26,24.4L24.4,26L0,1.6z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M1.6,26L0,24.4L24.4,0L26,1.6L1.6,26z"/>
+											</svg></a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="img-wrap">
+												<img src="prod/img/catalog-inner/temp1.jpg" alt="" class="">
+											</div>
+											<p><a href="#" class="">sewing template</a></p>
+											<span><em>Size: S</em></span>
+										</td>
+										<td>Code: 1261/211</td>
+										<td>&euro;51</td>
+										<td>
+											<a href="#"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M0,1.6L1.6,0L26,24.4L24.4,26L0,1.6z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M1.6,26L0,24.4L24.4,0L26,1.6L1.6,26z"/>
+											</svg></a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="img-wrap">
+												<img src="prod/img/catalog-inner/temp1.jpg" alt="" class="">
+											</div>
+											<p><a href="#" class="">sewing</a></p>
+											<span><em>Size: S</em></span>
+										</td>
+										<td>Code: 1455/145</td>
+										<td>&euro;80</td>
+										<td>
+											<a href="#"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M0,1.6L1.6,0L26,24.4L24.4,26L0,1.6z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#7c7c7c" d="M1.6,26L0,24.4L24.4,0L26,1.6L1.6,26z"/>
+											</svg></a>
 
+										</td>
+									</tr>
+								</tbody>
+						</table>
+						</div>	
+					
+						</div>
+							</div>
+						</div>
 					</div>
 
-
+					
 				</div>
 				<!--------- end of feedback ---------->
 
@@ -909,6 +937,7 @@
 
 	<script src="prod/js/lib/jquery-2.1.4.min.js"></script>
 	<script src="prod/js/lib/multiple-select.js"></script>
+	<script src="prod/js/lib/jquery.form-validator.min.js"></script>
 	<script src="prod/js/common.js"></script>
 
 

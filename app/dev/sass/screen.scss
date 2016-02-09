@@ -1244,21 +1244,18 @@ footer .logo a{
 .popup__overlay {
 	 /* display: none; */ 
 	width: 0;//new
-	margin-left: -60%;//new
 	position: fixed;
 	left: 0;
 	top: 0;
 	/* width: 100%; */ 
 	height: 100%;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(24, 24, 24, .8);
 	z-index: 9999;
-	transition: transform .5s ease;
 }
 
 .popup__overlay.menu-open{
 	 /* display: block; */ 
-	 width: 200%; 
-	transform: translateX(30%);
+	 width: 100%; 
 }
 
 .popup__overlay:after {
@@ -1275,15 +1272,21 @@ footer .logo a{
 .popup {
 	display: inline-block;
 	position: absolute;
-	/* width: 30%; */
-	width: 10.4%; //new
+	width: 350px; 
 	background: $pinkColor;
 	color: #fff;
 	left: 0;
 	right: 0;
 	height: 100%;
 	font-family: $P22UndergroundCYPro-Demi;
-	overflow-y: auto;
+	/* overflow-y: auto; */
+	margin-left: -350px;
+	transition: transform .25s ease;
+	p{
+		position: absolute;
+		bottom: 40px;
+    	left: 50;
+	}
 	ul {
 		padding: 0;
 		li {
@@ -1330,6 +1333,10 @@ footer .logo a{
 		line-height: 40px;
 		text-transform: uppercase;
 	}
+}
+
+.popup__overlay.menu-open .popup{
+	transform: translateX(350px);
 }
 
 .popup__close {
@@ -1905,7 +1912,8 @@ i.caret {
 .ask_button,
 .pay_button,
 .continue_button,
-.save_button{
+.save_button,
+.resend_parrern{
 	width: 210px;
 	height: 38px;
 	text-align: center;
@@ -1929,7 +1937,8 @@ i.caret {
 .ask_button:hover,
 .pay_button:hover,
 .continue_button:hover,
-.save_button:hover{
+.save_button:hover,
+.resend_parrern:hover{
 	background-color: $pinkColorDarker;
 }
 
@@ -1937,7 +1946,8 @@ i.caret {
 .ask_button:active,
 .pay_button:active,
 .continue_button:active,
-.save_button:active{
+.save_button:active,
+.resend_parrern:active{
 	background-color: $pinkColor;
 }
 
@@ -2341,7 +2351,8 @@ li.srch-block {
 
 .faq_content,
 .feedback_content,
-.personal-information{
+.personal-information,
+.my-orders{
 	@include clearfix;
 }
 
@@ -3029,7 +3040,8 @@ input[type="checkbox"]:checked + label span::after {
 /* feedback */
 
 .feedback_content,
-.personal-information{
+.personal-information,
+.my-orders{
 	margin-bottom: 100px;
 }
 
@@ -3194,6 +3206,76 @@ input[type="checkbox"]:checked + label span::after {
 
 .contact-form.contact-form_success > .row > *{
 	text-align: left !important;
+}
+
+/* account */
+
+.my-orders .table-header{
+	border-bottom: 2px solid $mainDarkColor;
+	width: 100%;
+	
+}
+
+.my-orders .accord{
+	/* background-color: #fff; */
+}
+
+.my-orders .accord .accord__block{
+	padding: 0;
+}
+
+.my-orders .cart-block,
+.my-orders .cart-block table{
+	width: 100%;
+	margin: 0;
+}
+
+.my-orders .cart-block table tbody{
+	border: none;
+}
+
+.my-orders .accord .table-header > .th{
+	display: table-cell;
+	color: #979797;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+
+.my-orders .accord .table-header > .th:first-child{ 
+	width: 149px;
+	padding: 15px 0 15px 40px;	
+}
+
+.my-orders .accord .table-header > .th:nth-child(2){ 
+	width: 168px;
+	padding: 15px 0 15px 24px;	
+}
+
+.my-orders .accord__but > .th{
+	display: table-cell;
+	font-size: 1em;
+	font-family: initial;
+	text-transform: initial;
+	letter-spacing: initial;
+	box-sizing: border-box;
+}
+
+.my-orders .accord__but{
+	padding-bottom: 0px;
+}
+
+.my-orders .accord__but:hover,
+.my-orders  .accord.is-active .accord__but{
+	color: $mainDarkColor;
+}
+
+.my-orders  .accord.is-active .accord__but{
+	color: $mainDarkColor;
+}
+
+.my-orders  .accord.is-active .accord__but{
+	border-bottom: 1px solid #d2d2d2;
+	background-color: #fff;
 }
 
 /* menu ------------------------------- */

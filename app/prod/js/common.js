@@ -246,21 +246,21 @@ $(document).ready(function () {
 		e.preventDefault();
 	//	$('.popup__overlay').css('display', 'block');
 		$('.popup__overlay').addClass('menu-open');
-		$('body').css('overflow', 'hidden');
+	//	$('body').css('overflow', 'hidden');
 	})
 	$('.popup__overlay').click(function (event) {
 		e = event || window.event
 		if (e.target == this) {
 		//	$('.popup__overlay').css('display', 'none');
 			$('.popup__overlay').removeClass('menu-open');
-			$('body').css('overflow', 'auto');
+		//	$('body').css('overflow', 'auto');
 		}
 	})
 	$('.popup__close').click(function (e) {
 		e.preventDefault();
 	//	$('.popup__overlay').css('display', 'none')
 		$('.popup__overlay').removeClass('menu-open')
-		$('body').css('overflow', 'auto');
+	//	$('body').css('overflow', 'auto');
 	});
 
 	// переключение языков в popup
@@ -278,41 +278,6 @@ $(document).ready(function () {
 		width:'100%'
 	});
     
-	
-	
-	
-//	$('.sort-by').click(function(){
-//	$('.sort-dropdown').slideToggle('fast',function () {
-//        var disp = $('.sort-dropdown').css('display'); 
-//		//console.log('display:'+disp);
-//		//  получаем значение свойства display, то есть видим или нет выпадающий список и выводим в консоль
-//		var arr = $('.sort-dropdown').siblings('.sort-by').find('.arr-down');
-//		//console.log(arr);
-//		// получаем доступ к элементу с классом .arr-down и выводим в консоль
-//		
-//		if( disp == 'block' ){
-//			$(arr).css('transform', 'rotate(180deg)');
-//		}else{
-//			$(arr).css('transform', 'rotate(360deg)');
-//		}
-//      });
-//		
-//	});
-//	$('ul.sort-dropdown li').click(function(){
-//		var tx = $(this).html();
-//		$('.sort-dropdown').slideUp('fast');
-//		$('.sort-by span').html(tx);
-//		// при выборе позиции из списка возвращает стрелку в первоначальное положение
-//		var arr1 = $('.sort-dropdown').siblings('.sort-by').find('.arr-down');
-//		$(arr1).css('transform', 'rotate(360deg)');
-
-//	});
-	
-	
-	
-	
-	
-	
 	
 	
 	// сортировка выпадающий список в модальном
