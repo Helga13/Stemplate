@@ -151,12 +151,12 @@ $(document).ready(function () {
 		//var $this = this;
 		
 		function handler() {
-			$($this).delay(1000).removeClass('content-hovered_active');
+			$($this).removeClass('content-hovered_active');
 			$($this).addClass('content-hovered_active');
 		}
 	}, function () {
 		clearTimeout( window.initHandler );
-		$('.categories').delay(1000).removeClass('content-hovered_active').delay(1000);
+		$('.categories').removeClass('content-hovered_active');
 	});
 	
 
@@ -268,6 +268,26 @@ $(document).ready(function () {
 		$('a').removeClass('active');
 		$(this).addClass('active');
 	});
+	
+	// popup cart
+	
+	$('#popup__cart').click(function (e) {
+		e.preventDefault();
+		$('.popup__overlay_cart').addClass('cart-open');
+	//	$('body').css('overflow', 'hidden');
+	})
+	$('.popup__overlay_cart').click(function (event) {
+		e = event || window.event
+		if (e.target == this) {
+			$('.popup__overlay_cart').removeClass('cart-open');
+		//	$('body').css('overflow', 'auto');
+		}
+	})
+	$('.popup__close').click(function (e) {
+		e.preventDefault();
+		$('.popup__overlay_cart').removeClass('cart-open')
+	//	$('body').css('overflow', 'auto');
+	});
 
 	// сортировка в catalog выпадающий список
 	
@@ -278,10 +298,6 @@ $(document).ready(function () {
 	});
     
 	
-	
-	// сортировка выпадающий список в модальном
-	
-	//  пахало одновременно со страничной сортировкой
 
 	// catalog-inner слайдер с миниатюрами
 

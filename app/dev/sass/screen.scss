@@ -143,13 +143,17 @@ figure {
 	margin-bottom: 20px;
 }
 
-
+.error{
+	
+}
 
 /* ============= end of general classes ======================= */
 
 .wrapper {
-	width: 1300px;
+	max-width: 1300px;
+	min-width: 980px;
 	margin: 0 auto;
+	box-sizing: border-box;
 }
 
 .header,
@@ -202,6 +206,8 @@ figure {
 	height: 100%;
 	.main-menu {
 		position: fixed;
+//		max-width: 1300px;
+//		min-width: 980;
 		width: 1300px;
 		top: 0;
 		z-index: 6;
@@ -339,39 +345,76 @@ section.main-menu {
 	.right-icons {
 		text-align: right;
 		float: right;
+		margin-top: 25px;
 		ul {
 			padding: 0;
 			margin: 0;
 			li {
-				padding-left: 40px;
+//				padding-left: 40px;
+				padding: 20px;
 				list-style: none;
-				height: 100%;
-				display: inline-block;
-				height: 20px;
-				width: 20px;
+				float: left;
 				transition: all .25s ease;
 				margin: 0;
+				cursor: pointer;
+				a{
+					height: 20px;
+					width: 20px;
+					display: block;
+				}
+
+			}
+			.cart{
+				padding-right: 0;
 			}
 			li a svg circle,
 			li a svg line,
 			li a svg path {
 				stroke: #fff;
-				transition: all .25s ease;
+				@include transition(stroke);
+			}
+			.cart a{
+				float: left;
+			}
+			.cart span{
+				font-size: 0.75em;
+				letter-spacing: .1em;
+				float: right;
+				height: 20px;
+    			line-height: 20px;
+    			padding: 2px 0;
+				text-indent: 9px;
+				@include transition(color);
 			}
 			.cart a svg path[fill='#E1E1E1'] {
 				fill: #fff;
-				transition: all .25s ease;
+				@include transition(fill);
 			}
-			li a:hover svg circle,
-			li a:hover svg line,
-			li a:hover svg path {
+			li:hover a svg circle,
+			li:hover a svg line,
+			li:hover a svg path {
 				stroke: $pinkColor;
 			}
-			.cart a:hover svg path[fill='#E1E1E1'] {
+			.cart:hover a svg path[fill='#E1E1E1']{
 				fill: $pinkColor;
+			}
+			.cart:hover span{
+				color: $pinkColor;
 			}
 		}
 	}
+}
+
+section.main-menu .logo-from-top a svg path,
+section.main-menu .logo a svg path{
+	transform: translate3d(0,0,0);
+	@include transition(fill);
+}
+
+section.main-menu .logo-from-top a:hover svg path,
+section.main-menu .logo a:hover svg path{
+	fill: #ebebeb;
+
 }
 
 .header.header-main.header-fix{
@@ -416,6 +459,7 @@ section.second-menu {
 		font-family: $P22UndergroundCYPro-Medium;
 		font-size: 0;
 		cursor: pointer;
+		position: relative;
 		.categories {
 			display: inline-table;
 //			margin: 0 18px;
@@ -424,7 +468,7 @@ section.second-menu {
 			height: 90px;
 			font-size: 16px;
 		}
-		.categories a {
+		.categories > a {
 			position: relative;
 			display: table-cell;
 			padding: 0 18px;
@@ -462,7 +506,7 @@ section.second-menu {
 			color: $mainDarkColor;
 			background-color: #fff;
 			position: absolute;
-			left: 155px;
+			left: -267px;
 			top: 75px;
 			z-index: 7;
 			opacity: 0;
@@ -583,11 +627,12 @@ section.second-menu {
 			visibility: visible;
 			background-color: $pinkColor;
 			bottom: -2px;
-			/*transition: opacity .25s ease, bottom .25s ease;*/
+//			transition: opacity .25s ease, bottom .25s ease;
 			//transition-delay: 1.25s;
 		}
 	}
 }
+
 
 section.second-menu .switcher.out .content-hovered{
 	transition: opacity .25s ease, top .25s ease, visibility 0.25s ease;
@@ -600,11 +645,10 @@ section.second-menu .switcher.is-open .content-hovered{
 	display: block;
 }
 
-//section.second-menu .switcher.is-open .categories > a::after{
-//	transition: none;
-//	transition-delay: 0s!important;
-//	
-//}
+section.second-menu .switcher.is-open .categories > a::after{
+	transition: none;
+	transition-delay: 0s!important;	
+}
 
 section.second-menu {
 	position: absolute;
@@ -629,7 +673,7 @@ section.second-menu .switcher.is-open:after {
     height: 438;
     width: 992px;
     top: 90px;
-    left: 155px;
+    left: -267px;
     background: #fff;
     content: "";
 	box-shadow: 0 0 10px 0 rgba(24,24,24,.1);
@@ -1260,11 +1304,11 @@ footer .logo a{
 
 /* popup menu (боковое меню)*/
 
-.popup__overlay {
+.popup__overlay,
+.popup__overlay_cart{
 	 /* display: none; */ 
 	width: 0;//new
 	position: fixed;
-	left: 0;
 	top: 0;
 	/* width: 100%; */ 
 	height: 100%;
@@ -1272,12 +1316,22 @@ footer .logo a{
 	z-index: 9999;
 }
 
-.popup__overlay.menu-open{
+.popup__overlay{
+	left: 0;	
+}
+
+.popup__overlay_cart{
+	right: 0;
+}
+
+.popup__overlay.menu-open,
+.popup__overlay_cart.cart-open{
 	 /* display: block; */ 
 	 width: 100%; 
 }
 
-.popup__overlay:after {
+.popup__overlay:after,
+.popup__overlay_cart:after{
 	display: inline-block;
 	height: 100%;
 	width: 0;
@@ -1288,19 +1342,19 @@ footer .logo a{
 	margin: 40px 50px;
 }
 
-.popup {
+.popup{
 	display: inline-block;
 	position: absolute;
-	width: 350px; 
+	width: 332px; 
 	background: $pinkColor;
 	color: #fff;
-	left: 0;
-	right: 0;
+//	left: 0;
+//	right: 0;
 	height: 100%;
 	font-family: $P22UndergroundCYPro-Demi;
 	/* overflow-y: auto; */
-	margin-left: -350px;
-	transition: transform .25s ease;
+	margin-left: -332px;
+	@include transition(transform);
 	p{
 		position: absolute;
 		bottom: 40px;
@@ -1355,10 +1409,95 @@ footer .logo a{
 }
 
 .popup__overlay.menu-open .popup{
-	transform: translateX(350px);
+	transform: translateX(332px);
 }
 
-.popup__close {
+.popup__overlay_cart.cart-open .popup_cart{
+	transform: translateX(-410px);
+}
+
+.popup_cart{
+	width: 410px;
+	margin-right: -410px;
+	right: 0;
+	display: inline-block;
+	position: absolute;
+	background: #fff;
+	color: $mainDarkColor;
+	height: 100%;
+	@include transition(transform);
+	.number-of-goods{
+		font-family: $P22UndergroundCYPro-Demi;
+		font-size: .75em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+	
+	.checkout-block{
+		width: 310px;
+		margin-right: 0;
+		table{
+			width: 100%;
+		}
+	}
+	
+	.checkout-block tbody::after{
+		left: 0;
+		width: 310px;
+		bottom: 105px;
+	}
+
+	.checkout-block tbody td:first-child{
+		padding: 15px 0;
+		width: 270px;
+	}
+	.checkout-block tbody tr:last-child td:nth-child(1){
+		padding-bottom: 45px;
+	}
+	.checkout-block .coast-of-goods{
+		font-family: P22UndergroundCYPro-Heavy,Arial,sans-serif;
+		font-size: 14px;
+		letter-spacing: .1em;
+		display: block;
+		color: $mainDarkColor;
+		padding-top: 15px;
+		padding-left: 110px;
+	}
+	.checkout-block tbody td:last-child{
+		padding: 15px 0;
+		a{
+			float: right;
+			height: 13px;
+			width: 13px;
+			path{
+				@include transition(fill);
+			}
+		}
+		a:hover path{
+			fill: $pinkColorDarker;
+		}
+	}
+	.checkout-table tbody tr:last-child td:first-child em{
+		float: left;
+		padding-top: 5px;
+	}
+	.checkout-table tbody tr:last-child td:first-child em + .coast-of-goods{
+		padding-top: 5px;
+	}
+	.pay_button{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.popup_cart-item-icons{
+		text-align: justify;
+		text-align-last: justify;
+		padding-top: 17px;
+	}
+}
+
+.popup .popup__close,
+.popup_cart .popup__close{
 	display: block;
 	position: absolute;
 	top: 35px;
@@ -1371,8 +1510,12 @@ footer .logo a{
 	}
 }
 
-.popup__close:hover path {
+.popup .popup__close:hover path {
 	fill: #ffaad2;
+}
+
+.popup_cart .popup__close:hover path {
+	fill: $pinkColorDarker;
 }
 
 

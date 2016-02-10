@@ -732,7 +732,7 @@
 					
 						</div>
 
-						<form id="customer-info" class="your-payment customer-info" method="POST">
+						<form id="customer-info" class="your-payment customer-info js-validate" method="POST">
 							<h3>customer information</h3>
 							<form action="">
 
@@ -742,7 +742,7 @@
 						  	<em>Already registered? Please <a href="#">Login</a> for a faster checkout</em>
 						  </div>
 							  <label for="contact-name"><em>First and last name</em><span class="required-field">*</span></label>
-							  <input id="contact-name" type="" name="name" value="" required>
+							  <input id="contact-name" type="" name="name" value="" data-validation="required">
 							  <label for="contact-mail"><em>E-mail</em><span class="required-field">*</span></label>
 							  <input id="contact-mail" type="email" required="required" data-validation-error-msg-required="Incorrect e-mail. Please try again" name="email" value="">
 							  <label for="contact-phone"><em>Phone</em></label>
