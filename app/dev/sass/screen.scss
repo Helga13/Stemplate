@@ -58,7 +58,8 @@ h1 {
 	letter-spacing: 0.05em;
 }
 
-h2 {
+h2,
+.h2{
 	font-family: $P22UndergroundCYPro-Demi;
 	text-transform: uppercase;
 	margin: 0;
@@ -66,7 +67,8 @@ h2 {
 	letter-spacing: 0.05em;
 }
 
-h3 {
+h3,
+.h3{
 	text-transform: uppercase;
 	font-family: $P22UndergroundCYPro-Medium;
 	font-size: 1em;
@@ -1363,6 +1365,8 @@ footer .logo a{
 		}
 	}
 	a {
+		display: inline-block;
+    	width: 100%;
 		@include transition(color);
 	}
 	a:hover {
@@ -2228,9 +2232,10 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 }
 
 
-/* popup size-guid */
+/* popup size-guid, popup leave-review */
 
-.overlay_size-guid {
+.overlay_size-guid,
+.overlay_leave-review{
 	display: none;
 	position: fixed;
 	left: 0;
@@ -2243,7 +2248,8 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 	overflow-y: auto;
 }
 
-.overlay_size-guid:after {
+.overlay_size-guid:after,
+.overlay_leave-review:after{
 	display: inline-block;
 	height: 100%;
 	width: 0;
@@ -2251,17 +2257,57 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 	content: '';
 }
 
-.popup_size-guid {
+.popup_size-guid,
+.popup_leave-review{
 	display: inline-block;
 	position: relative;
 	width: 670px;  /* из-за бокового меню не в %*/
 	padding: 50px;
 	background: #fff;
 	vertical-align: top;
-	top: 170px;
+	top: 120px;
 	text-align: left;
 	overflow-y: auto;
 	box-sizing: border-box;
+	margin: 50px;
+}
+
+.popup_leave-review{
+	width: 410px;
+	form{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		#rate-product{
+			margin: 13px 0 18px;
+			overflow: hidden;
+			p{
+				padding: 0;
+				overflow: hidden;
+				.stars{
+					display: block;
+					cursor: pointer;
+					float: left;
+					margin-right: 15px; 
+					width: 18px;
+					height: 18px;
+				}
+				.stars path{
+					fill: #C8C8C8;
+				}
+				.stars.marked path{
+					fill: #F6C600;
+				}
+			}
+		}
+		.field{
+			margin-top: 13px;
+		}
+		button p{
+			padding-bottom: 0;
+		}
+	}
 }
 
 .popup__close_cross {
@@ -2272,13 +2318,14 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 	width: 25px;
 }
 
-.size-guide-content {
+.size-guide-content,
+.leave-review-content{
 	padding: 20px 0;
-	h2 {
+	.h2 {
 		letter-spacing: .1em;
 		margin-bottom: 30px;
 	}
-	h3 {
+	.h3 {
 		padding: 0;
 		padding: 10px 0;
 		font-size: 16px;
@@ -2325,6 +2372,35 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 	}
 }
 
+.size-guide-content table{
+	width: 100%;
+	margin-top: 20px;
+	thead{
+		color: #979797;
+		text-transform: uppercase;
+		text-align: left;
+		th{
+			font-weight: 100;
+			padding: 14px;
+		}
+		th:first-child{
+			text-transform: capitalize;
+			width: 120px;
+    		box-sizing: border-box;
+		}
+	}
+	tbody{
+		tr{
+			border-bottom: 1px solid #d2d2d2;
+		}
+		td{
+			padding: 10px 14px;
+			width: 65px;
+    		box-sizing: border-box;
+		}
+	}
+}
+
 .size-guide-tabs_content #jackets,
 .size-guide-tabs_content #misses,
 .size-guide-tabs_content #evening,
@@ -2336,6 +2412,13 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 .size-guide-tabs_content {
 	margin-top: 25px;
 }
+
+.size-guide-tabs_content .choose-block{
+	float: right;
+	width: 38.6%; /* размер выпадающего меню в модальном окене catalog-inner.html */
+}
+
+
 
 
 /* radiobutton begin */
@@ -2402,10 +2485,7 @@ table td {
 }
 
 
-.size-guide-tabs_content .choose-block{
-	float: right;
-	width: 38.6%; /* размер выпадающего меню в модальном окене catalog-inner.html */
-}
+/* popup leave-review */
 
 
 
@@ -2925,9 +3005,9 @@ width: 61.5%;
 	color: #979797;
 }
 
-/* .required-field{
+ .required-field{
 	color: $pinkColor;
-} */
+} 
 
 .your-payment.customer-info .contact-details{
 	padding-right: 40px;
@@ -3313,14 +3393,14 @@ input[type="checkbox"]:checked + label span::after {
 	margin-bottom: 0;
 }
 
-//.contact-form > .row > div:last-child input:last-child{
-//	height: 131px;
-//}
-
-.contact-form textarea{
-	height: 131px;
-	line-height: 2em;  /*24px/12px*/
+#message{
+	height: 130px;
 }
+
+/* .contact-form textarea{
+	height: 128px;
+	line-height: 2em;  24px/12px
+} */
 .feedback_content .detail{
 	padding: 50px 30px 60px;
 }

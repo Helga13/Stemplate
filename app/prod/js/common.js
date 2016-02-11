@@ -253,7 +253,7 @@ $(document).ready(function () {
 		e = event || window.event
 		if (e.target == this) {
 			$('.popup__overlay').removeClass('menu-open');
-		//	$('body').css('overflow', 'auto');
+		//	$('body').css('overflow', 'auto');    
 		}
 	})
 	$('.popup__close').click(function (e) {
@@ -335,17 +335,50 @@ $(document).ready(function () {
 
 	$('[data-id = size-guid]').click(function (e) {
 		e.preventDefault();
-		$('.overlay_size-guid').css('display', 'block')
+		$('.overlay_size-guid').css('display', 'block');
+		$('body').css('overflow', 'hidden');  // убирает основную полосу прокрутки
 	})
 	$('.overlay_size-guid').click(function (event) {
 		e = event || window.event
 		if (e.target == this) {
-			$('.overlay_size-guid').css('display', 'none')
+			$('.overlay_size-guid').css('display', 'none');
+			$('body').css('overflow', 'auto'); // возвращает полосу прокрутки
 		}
 	})
 	$('.popup__close_cross').click(function (e) {
 		e.preventDefault();
-		$('.overlay_size-guid').css('display', 'none')
+		$('.overlay_size-guid').css('display', 'none');
+		$('body').css('overflow', 'auto');
+	});
+	
+	// popup leave-review
+	
+	$('[data-id = leave-review]').click(function (e) {
+		e.preventDefault();
+		$('.overlay_leave-review').css('display', 'block');
+		$('body').css('overflow', 'hidden');  // убирает основную полосу прокрутки
+	})
+	$('.overlay_leave-review').click(function (event) {
+		e = event || window.event
+		if (e.target == this) {
+			$('.overlay_leave-review').css('display', 'none');
+			$('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+		}
+	})
+	$('.popup__close_cross').click(function (e) {
+		e.preventDefault();
+		$('.overlay_leave-review').css('display', 'none');
+		$('body').css('overflow', 'auto');
+	});
+	
+	// popup leave-review Rate product
+
+	$('.popup_leave-review .stars').click(function () {
+		if ($(this).hasClass('marked')) {
+			$(this).removeClass('marked');
+		} else {
+			$(this).addClass('marked');
+		}
 	});
 	
 	
@@ -415,9 +448,6 @@ $(document).ready(function () {
 					onValidate: function($form){
 						
 					},
-//					onError : function() {
-//
-//      },
 					onSuccess: function($form){
 						if ($form.hasClass('has-validation-callback')){
 							removes(forms, success);
@@ -434,6 +464,9 @@ $(document).ready(function () {
 		forms.removeClass('is-active');
 		success.addClass('is-active');
 	};
+	
+	
+		
 	
 
 

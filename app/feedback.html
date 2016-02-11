@@ -643,30 +643,43 @@
 				</ul>
 
 
-					<form class="contact-form is-active">
+					<form class="js-validate contact-form is-active">
 						<h2>contact details</h2>
 						<p><em>If you have any concerns or questions, don’t hesitate to contact us. Drop us a line anyway.</em></p>
 						<div class="row">
 
 							<div>
+							<div class="field">
 								<label for="contact-name"><em>First and last name</em><span class="required-field">*</span></label>
-								<input id="contact-name" type="" name="name" value="" required>
+								<input id="contact-name" type="text" data-validation="required" data-validation-error-msg="Incorrect first and last name. Please try again.">
+								</div>
+								<div class="field">
 								<label for="contact-mail"><em>E-mail</em><span class="required-field">*</span></label>
-								<input id="contact-mail" type="email" required="required" data-validation-error-msg-required="Incorrect e-mail. Please try again" name="email" value="">
+								<input id="contact-mail" type="email" data-validation="required" data-validation-error-msg-required="Incorrect e-mail. Please try again">
+								</div>
 							</div>
 
 							<div>
+							<div class="field">
 								<label for="message"><em>Message<span class="required-field">*</span></em></label>
-<!--								<input id="message" type="text" name="message" value="" required>-->
-								<textarea id="message" type="text" name="message" value="" required></textarea>
+								<input id="message" type="text" data-validation="required" data-validation-error-msg="Incorrect field message. Please try again.">								
+								<!-- <textarea id="message" type="text" name="message" value="" required></textarea> -->
+								</div>
 							</div>	
 
 						</div>
-						<button value="" type="button" class="save_button">
+						<button value="" type="submit" class="save_button">
 							<p>save</p>
 						</button>
 
 					</form>
+					
+					<div class="contact-form contact-form_success">
+						<div class="row">
+							<h2>success</h2>
+							<p>Your changes to user data successfully saved!</p>
+						</div>
+					</div>
 
 
 					<div class="detail">
@@ -909,6 +922,7 @@
 
 	<script src="prod/js/lib/jquery-2.1.4.min.js"></script>
 	<script src="prod/js/lib/multiple-select.js"></script>
+	<script src="prod/js/lib/jquery.form-validator.min.js"></script>
 	<script src="prod/js/common.js"></script>
 
 
