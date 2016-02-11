@@ -143,10 +143,6 @@ figure {
 	margin-bottom: 20px;
 }
 
-.error{
-	
-}
-
 /* ============= end of general classes ======================= */
 
 .wrapper {
@@ -1313,7 +1309,7 @@ footer .logo a{
 	/* width: 100%; */ 
 	height: 100%;
 	background: rgba(24, 24, 24, .8);
-	z-index: 9999;
+	z-index: 100;
 }
 
 .popup__overlay{
@@ -1484,6 +1480,18 @@ footer .logo a{
 	}
 	.checkout-table tbody tr:last-child td:first-child em + .coast-of-goods{
 		padding-top: 5px;
+	}
+	
+	.template-sale{
+		z-index: 100;
+    	position: absolute;
+		color: $pinkColor;
+		right: 8px;
+    	top: 7px;
+		text-transform: capitalize;
+		font-family: 'Times New Roman',Arial,sans-serif;
+		font-size: 1em;
+    	letter-spacing: normal;
 	}
 	.pay_button{
 		width: 100%;
@@ -2917,9 +2925,9 @@ width: 61.5%;
 	color: #979797;
 }
 
-.required-field{
+/* .required-field{
 	color: $pinkColor;
-}
+} */
 
 .your-payment.customer-info .contact-details{
 	padding-right: 40px;
@@ -2929,11 +2937,23 @@ width: 61.5%;
 	border-left: 1px solid #d2d2d2;
 }
 
+.your-payment.customer-info .contact-details .field{
+	margin-top: 11px;
+}
+
+.contact-form .field{
+	margin-top: 21px;
+}
+.your-payment.customer-info .contact-details .field:nth-child(2),
+.contact-form .field:nth-child(1){
+	margin-top: 0;
+}
+
 .your-payment.customer-info .contact-details input,
 .contact-form input,
 .contact-form textarea{
 	width: 100%;
-	margin: 16px 0 21px;
+	margin: 13px 0 10px;
 	border: 1px solid #d7d7d7;
 	height: 38px;
 	border-radius: $borderRadius - 2;
@@ -2945,6 +2965,17 @@ width: 61.5%;
 	font-size: 0.75em;
 	cursor: pointer;
 	@include transition(border);
+}
+
+form.js-validate .error{
+	border-color: #ff0606!important;
+}
+
+form.js-validate .form-error{
+	display: block;
+	background: #ffe6e6;
+	text-align: center;
+	padding: 5px;
 }
 
 .your-payment.customer-info .contact-details input:hover,
@@ -3007,7 +3038,8 @@ width: 61.5%;
 
 /* checkbox begin */
 
-.contact-details .checkbox-block{ 
+.contact-details .checkbox-block{
+	margin-top: 10px;
 	input[type="checkbox"] + label{
 		color: $mainDarkColor;
 		cursor: pointer;

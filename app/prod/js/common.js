@@ -397,14 +397,8 @@ $(document).ready(function () {
 
 	});
 	
+	
 	// валидация форм
-	
-//	$.validate({
-//		form : '#customer-info',
-//		errorMessagePosition : 'top'
-//	});
-	
-	//FORM VALIDATOR
 
 
 	(function(){
@@ -419,10 +413,13 @@ $(document).ready(function () {
 					borderColorOnError : true,
 					scrollToTopOnError : false,
 					onValidate: function($form){
-
+						
 					},
+//					onError : function() {
+//
+//      },
 					onSuccess: function($form){
-						if ($form.hasClass('is-active')){
+						if ($form.hasClass('has-validation-callback')){
 							removes(forms, success);
 						}
 						

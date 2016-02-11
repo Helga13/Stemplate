@@ -734,49 +734,71 @@
 
 						<form id="customer-info" class="your-payment customer-info js-validate" method="POST">
 							<h3>customer information</h3>
-							<form action="">
+						
 
 							<div class="contact-details">
 							<p>1. contact details</p>
-						  	<div class="login-for-checkout">
-						  	<em>Already registered? Please <a href="#">Login</a> for a faster checkout</em>
-						  </div>
-							  <label for="contact-name"><em>First and last name</em><span class="required-field">*</span></label>
-							  <input id="contact-name" type="" name="name" value="" data-validation="required">
-							  <label for="contact-mail"><em>E-mail</em><span class="required-field">*</span></label>
-							  <input id="contact-mail" type="email" required="required" data-validation-error-msg-required="Incorrect e-mail. Please try again" name="email" value="">
-							  <label for="contact-phone"><em>Phone</em></label>
-							  <input id="contact-phone" type="" name="" value="">
-							  
-							  <div class="checkbox-block">
-							  
-							 	<input id="accept-the terms" type="checkbox" name='choosebox1'/>
-								<label for="accept-the terms"><span></span>Accept the terms of the <a href="#" class="contract-offer">contract offer</a></label>
-								<input id="subscribe-news" type="checkbox" name='choosebox2'/>
-								<label for="subscribe-news"><span></span>Subscribe to our news</label>
-							  	
-							  </div>
-							
+							<div class="login-for-checkout">
+								<em>Already registered? Please <a href="#">Login</a> for a faster checkout</em>
+							</div>
+							<div class="field">
+								<label for="contact-name">
+									<em>First and last name</em>
+									<span class="required-field">*</span>
+								</label>
+								<input id="contact-name" type="text" data-validation="required" data-validation-error-msg="Incorrect first and last name. Please try again.">
+							</div>
+							<div class="field">
+								<label for="contact-mail"><em>E-mail</em><span class="required-field">*</span></label>
+								<input id="contact-mail" type="text" data-validation="email" data-validation-error-msg="Incorrect e-mail. Please try again.">
+							</div>
+							<div class="field">
+								<label for="contact-phone"><em>Phone</em></label>
+								<input id="contact-phone" type="text">
+							</div>
+							<div class="checkbox-block">							  							<div>
+									<input id="accept-the terms" type="checkbox" name='choosebox1'/>
+									<label for="accept-the terms"><span></span>Accept the terms of the <a href="#" class="contract-offer">contract offer</a></label>
+								</div>
+								<div>
+									<input id="subscribe-news" type="checkbox" name='choosebox2'/>
+									<label for="subscribe-news"><span></span>Subscribe to our news</label>
+								</div>
+							  </div>							
 							</div>
 							<div class="paiment-meth">
 							<p>2. payment method</p>
 							<div class="choose-payment">
 								<p>Сhoose the most convenient method of payment:</p>
 							
-							
-							<input id="visa" type="radio" name='choose-payment'/>
-							<label for="visa"><span></span><img src="prod/img/payment-icons/visa.png" alt=""></label>
-							<input id="maestro" type="radio" name='choose-payment'/>
-							<label for="maestro"><span></span><img src="prod/img/payment-icons/maestro.png" alt=""></label>
-							<input id="mastercard" type="radio" name='choose-payment'/>
-							<label for="mastercard"><span></span><img src="prod/img/payment-icons/mastercard.png" alt=""></label>
-							<input id="yandexmoney" type="radio" name='choose-payment'/>
-							<label for="yandexmoney"><span></span><img src="prod/img/payment-icons/yandexmoney.png" alt=""></label>
-							<input id="webmoney" type="radio" name='choose-payment'/>
-							<label for="webmoney"><span></span><img src="prod/img/payment-icons/webmoney.png" alt=""></label>
-							<input id="qiwi" type="radio" name='choose-payment'/>
-							<label for="qiwi"><span></span><img src="prod/img/payment-icons/qiwi.png" alt=""></label>
-							
+							<div>
+								<input id="visa" type="radio" name='choose-payment'/>
+								<label for="visa"><span></span>
+									<img src="prod/img/payment-icons/visa.png" alt="">
+								</label>
+							</div>
+							<div>
+								<input id="maestro" type="radio" name='choose-payment'/>
+								<label for="maestro"><span></span>
+									<img src="prod/img/payment-icons/maestro.png" alt="">
+								</label>
+							</div>
+							<div>
+								<input id="mastercard" type="radio" name='choose-payment'/>
+								<label for="mastercard"><span></span><img src="prod/img/payment-icons/mastercard.png" alt=""></label>
+							</div>
+							<div>
+								<input id="yandexmoney" type="radio" name='choose-payment'/>
+								<label for="yandexmoney"><span></span><img src="prod/img/payment-icons/yandexmoney.png" alt=""></label>
+							</div>
+							<div>
+								<input id="webmoney" type="radio" name='choose-payment'/>
+								<label for="webmoney"><span></span><img src="prod/img/payment-icons/webmoney.png" alt=""></label>
+							</div>
+							<div>
+								<input id="qiwi" type="radio" name='choose-payment'/>
+								<label for="qiwi"><span></span><img src="prod/img/payment-icons/qiwi.png" alt=""></label>
+							</div>
 							<p class="show-all">
                				<a href="#" class="leave-review" id="#">Show all payment</a>&nbsp;
                				<i class="caret"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 266.5 153.1" enable-background="new 0 0 266.5 153.1" xml:space="preserve">
@@ -799,25 +821,16 @@
                			</p>
 							
 							</div>
-							
-							
+
 								<button value="" type="submit"  class="continue_button">
 									<p>continue</p>
 								</button>
-								
-								
+
 							</div>
 
-							</form>
-
-							
-
-						</form>
-						
-						
+						</form>	
 
 					</div>
-
 
 				</div>
 				<!--------- end of payment ---------->
