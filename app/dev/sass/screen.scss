@@ -3492,6 +3492,19 @@ input[type="checkbox"]:checked + label span::after {
 
 .my-orders .accord{
 	/* background-color: #fff; */
+	border-bottom: 2px solid $mainDarkColor;
+    margin-bottom: 0;
+}
+.my-orders .accord .accord__but .icon{
+	top: 25px;
+	right: 35px;
+}
+
+.my-orders .accord .accord__but .icon:before,
+.my-orders .accord .accord__but .icon:after,
+.my-orders .accord .accord__but:hover .icon:before,
+.my-orders .accord .accord__but:hover .icon:after{
+	background-color: #434343;
 }
 
 .my-orders .accord .accord__block{
@@ -3508,7 +3521,7 @@ input[type="checkbox"]:checked + label span::after {
 	border: none;
 }
 
-.my-orders .accord .table-header > .th{
+.my-orders .accordions .table-header > .th{
 	display: table-cell;
 	color: #979797;
 	line-height: 1.5em;
@@ -3516,26 +3529,111 @@ input[type="checkbox"]:checked + label span::after {
 	box-sizing: border-box;
 }
 
-.my-orders .accord .table-header > .th:first-child,
+.my-orders .accordions .table-header > .th:first-child,
 .my-orders .accord__but > .th:first-child{ 
 	width: 149px;
-	padding: 15px 0 15px 40px;	
+	padding: 13px 0 13px 40px;
+	box-sizing: border-box;
 }
 
-.my-orders .accord .table-header > .th:nth-child(2){ 
+.my-orders .accordions .table-header > .th:nth-child(2),
+.my-orders .accord__but > .th:nth-child(2){ 
 	width: 168px;
-	padding: 15px 0 15px 24px;	
+	padding: 15px 0 15px 24px;
+	box-sizing: border-box;
 }
 
-.my-orders .accord .table-header > .th:nth-child(3){ 
+.my-orders .accordions .table-header > .th:nth-child(3),
+.my-orders .accord__but > .th:nth-child(3){ 
 	width: 120px;
-	padding: 15px 0 15px;	
+	padding: 15px 0 15px;
+	box-sizing: border-box;
 }
 
-.my-orders .accord .table-header > .th:nth-child(4){ 
+.my-orders .accordions .table-header > .th:nth-child(4),
+.my-orders .accord__but > .th:nth-child(4){ 
 	width: 83px; /* 203-120 */
 	padding: 15px 0 15px;
 	text-align: right;
+	box-sizing: border-box;
+	font-family: 'Times New Roman',Arial,sans-serif;
+    text-align: right;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
+.my-orders .accord__but.in-the-treatment > .th:nth-child(5){ 
+	width: 233px; /* 203-120 */
+	padding: 0 0 0 50px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	p{
+		display: block;
+		width: 145px;
+		height: 30px;
+		line-height: 30px;
+		background-color: #ffe5f1;
+		border-radius: $borderRadius;
+		color: #fffafc;
+	}
+}
+
+
+.my-orders .accord__but > .th:nth-child(5){ 
+	width: 233px; /* 203-120 */
+	padding: 0 0 0 50px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	p{
+		display: block;
+		width: 145px;
+		height: 30px;
+		line-height: 30px;
+		background-color: $pinkColor;
+		border-radius: $borderRadius;
+		
+	}
+}
+
+.my-orders .cart-table table tbody > tr > td:nth-child(1){
+	width: 317px;
+    box-sizing: border-box;
+}
+
+.my-orders .cart-table table tbody > tr > td:nth-child(2){
+	width: 120px;
+    box-sizing: border-box;
+}
+
+.my-orders .cart-table table tbody > tr > td:nth-child(3){
+	width: 83px;
+	padding-right: 0;
+    box-sizing: border-box;
+}
+
+.my-orders .cart-table table tbody > tr > td:nth-child(4){
+	padding: 9px 0 0 50px;
+	a{
+		display: inline-block;
+		float: none;
+		width: 145px;
+		height: 30px;
+		line-height: 30px;
+		background-color: transparent;
+		text-align: center;
+		color: $pinkColor;
+		@include transition(color);
+		p{
+			line-height: 30px;
+		}
+	}
+	a:hover{
+		color: $pinkColorDarker;
+	}
+}
+
+.my-orders .cart-table table tbody > tr:first-child > td:nth-child(4){
+	padding: 28px 0 0 50px;
 }
 
 .my-orders .accord__but > .th{
@@ -3553,6 +3651,12 @@ input[type="checkbox"]:checked + label span::after {
 .my-orders .accord__but:hover,
 .my-orders  .accord.is-active .accord__but{
 	color: $mainDarkColor;
+    border-bottom: 1px solid transparent;
+    background-color: #fff;
+}
+
+.my-orders .accord:last-child>.accord__but{
+   border-bottom: none; 
 }
 
 .my-orders  .accord.is-active .accord__but{
@@ -3562,6 +3666,27 @@ input[type="checkbox"]:checked + label span::after {
 .my-orders  .accord.is-active .accord__but{
 	border-bottom: 1px solid #d2d2d2;
 	background-color: #fff;
+}
+
+.right-col-reminder{
+	float: left;
+	width: 22%; /* 270px/1300px + margin quotes*/
+	margin-top: 70px;
+	p{
+		line-height: 1.375em; /* 22px/16px */
+	}
+}
+
+.quotes{
+	color: $pinkColor; 
+	float: left;
+	height: 100%;
+	font-size: 3.75em; /* 60.01px/16px */
+	line-height: 0.5em;
+	font-style: italic;
+	position: relative;
+    top: 10px;
+	margin-right: 15px;
 }
 
 /* menu ------------------------------- */
