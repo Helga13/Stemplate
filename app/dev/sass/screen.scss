@@ -2280,26 +2280,64 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 		padding: 0;
 		text-align: left;
 		#rate-product{
-			margin: 13px 0 18px;
-			overflow: hidden;
-			p{
-				padding: 0;
-				overflow: hidden;
-				.stars{
-					display: block;
-					cursor: pointer;
-					float: left;
-					margin-right: 15px; 
-					width: 18px;
-					height: 18px;
-				}
-				.stars path{
-					fill: #C8C8C8;
-				}
-				.stars.marked path{
-					fill: #F6C600;
-				}
-			}
+			margin: 13px 0 7px;
+            position: relative;
+            @include clearfix;
+            & > div {
+                float: left;
+                @include clearfix;
+            }
+            label {
+                height: 20px;
+                width: 30px;
+                float: right;
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+                margin-right: 0;
+            }
+            input:checked ~ label, 
+            label,
+            label:hover,
+            label:hover ~ label {
+                background: url('../../prod/img/svg/star-grey.svg') no-repeat;
+            }
+            input:checked ~ label{
+                background: url('../../prod/img/svg/star.svg') no-repeat;
+                height: 20px;
+                width: 30px;
+            }
+            label:hover,
+            label:hover ~ label{
+                height: 20px;
+                width: 30px;
+                background: url('../../prod/img/svg/star.svg') no-repeat;
+            }
+             input {
+                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+                opacity: 0;
+                width: 20px;
+                height: 15px;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+            }
+            
+            #star-0 {
+                left: 00px;
+            }
+            #star-1 {
+                left: 20px;
+            }
+            #star-2 {
+                left: 40px;
+            }
+            #star-3 {
+                left: 60px;
+            }
+            #star-4 {
+                left: 80px;
+            }	
 		}
 		.field{
 			margin-top: 13px;
