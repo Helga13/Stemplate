@@ -204,9 +204,9 @@ figure {
 	height: 100%;
 	.main-menu {
 		position: fixed;
-//		max-width: 1300px;
-//		min-width: 980;
-		width: 1300px;
+		max-width: 1300px;
+		min-width: 980;
+		width: 100%;
 		top: 0;
 		z-index: 6;
 		height: 0; /* чтобы не перекрывать .switcher в header.header-main */
@@ -2279,6 +2279,10 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 		margin: 0;
 		padding: 0;
 		text-align: left;
+        .h2{
+            padding: 0;
+            text-align: left;
+        }
 		#rate-product{
 			margin: 13px 0 7px;
             position: relative;
@@ -3504,7 +3508,7 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 
-// form validation success message (not popup)
+// form validation success message (and popup)
 
 .contact-form.is-active,
 .contact-form.contact-form_success.is-active{
@@ -3512,12 +3516,25 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 .contact-form,
-.contact-form.contact-form_success{
+.contact-form.contact-form_success,{
 	display: none;
 }
 
 .contact-form.contact-form_success > .row > *{
 	text-align: left !important;
+}
+
+.popup_leave-review .contact-form.contact-form_success,
+.popup_leave-review .contact-form.contact-form_success.is-active{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .h2{
+        padding-bottom: 0;
+    }
+    p{
+        text-align: left;
+    }
 }
 
 /* account */
@@ -3791,3 +3808,10 @@ input[type="checkbox"]:checked + label span::after {
 .menu__tab.is-active {
     display: block;
 }*/
+
+
+@media screen and (max-width: 1366px) {
+   .wrapper {
+        padding: 0 20px;
+    } 
+}
