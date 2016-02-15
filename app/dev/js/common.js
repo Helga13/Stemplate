@@ -109,9 +109,25 @@ $(document).ready(function () {
             $('.header-other').removeClass('header-fix');
         }
 
-
-
     });
+    
+    // высота экрана
+    
+    function setHeight() {
+				var windowHeight = $(window).innerHeight();
+        if(windowHeight < 670){
+            $('.popup p').css('display', 'none');
+            $('.popup .menu-list').css({'margin-top': '20px', 'margin-bottom':'10px'});
+        }else{
+        
+            $('.popup p').css('display', 'inline'); 
+            $('.popup .menu-list').css({'margin-top': '120px', 'margin-bottom':'40px'});
+        }
+				
+    };
+    setHeight();
+    
+
 
     // открытие меню по ховеру
     // работает!

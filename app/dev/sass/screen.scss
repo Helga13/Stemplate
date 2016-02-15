@@ -116,6 +116,9 @@ figure {
 .clearfix {
 	@include clearfix;
 }
+.c-both{
+    clear: both;
+}
 
 .f-left {
 	float: left;
@@ -695,6 +698,7 @@ section.content {
 			list-style: none;
 			font-size: 16px;
 			position: relative;
+            vertical-align: top;
 			p {
 				padding: 45px;
 				padding-left: 75px;
@@ -1184,7 +1188,7 @@ footer {
 		width: 24%;
 	}
 	.mid-col {
-		width: 51%;
+		width: 52%;
 		.footer-nav {
 			padding: 0;
 			list-style: none;
@@ -1193,7 +1197,7 @@ footer {
 			font-family: $P22UndergroundCYPro-Demi;
 			margin-top: 26px;
 			font-size: 0;
-			width: 80%;
+			/*width: 80%;*/
 			li {
 				display: inline-block;
 				padding-right: 30px;
@@ -1383,10 +1387,11 @@ footer .logo a{
 		li {
 			display: inline-block;
 			text-transform: uppercase;
+            margin-right: 3px;
 		}
 		a {
 			padding: 5px 1px;
-			margin: 0 5px;
+//			margin: 0 5px;
 			text-decoration: none;
 			font-size: 0.75em;
 			/*12px*/
@@ -1723,7 +1728,7 @@ footer .logo a{
 }
 
 .catalog_content .item-wrap {
-	width: 23.5% !important;
+	width: 23.44% !important;
 	margin-bottom: 50px;
 	a {
 		position: absolute;
@@ -1853,8 +1858,8 @@ footer .logo a{
 	left: 50%; 
 	transform: translate3d(-50%, -50%, 0); 
 	object-fit: cover;
-	max-width: 100%;
-	width: 100%;
+	/*max-width: 100%; */
+	/*width: 100%;*/  /*чтобы растягивать маленькие фото*/
 	border-radius: $borderRadius;
 }
 
@@ -1880,8 +1885,9 @@ footer .logo a{
 }
 
 .photo-frame .thumbs {
-	width: 14%;
+	/*width: 14%;*/
 	/* 90px/640px */
+    width: 91px;
 	float: left;
 	margin-right: 3.125%;
 	/* 20px/640px */
@@ -3998,4 +4004,54 @@ input[type="checkbox"]:checked + label span::after {
 	.header .logo-from-top, .header-other .logo-from-top{
 		padding-left: 20px;
 	}
+    
+    .label-price{
+        padding-right: 17px;
+    }
+    .description-wrap {
+	    width: 91.92%;
+	    margin-left: 40px;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+   .photo-frame .images {
+        width: 77%;
+        float: left;
+        margin-right: 0;
+    }
+    
+    footer {
+        .left-col,
+        .right-col {
+            width: 21%;
+        }
+        .mid-col {
+            width: 58%;
+            .footer-nav li{
+                padding-right: 27px;
+            }
+        }
+    }
+    
+    footer .mid-col .footer-item-icons img {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    section.second-menu .switcher .content-hovered,
+    section.second-menu .switcher.is-open:after{
+        width: 945px;
+        left: -244px;
+    }
+    
+    footer {
+        .mid-col {
+            .footer-nav li{
+                padding-right: 25px;
+            }
+        }
+    }
 }
