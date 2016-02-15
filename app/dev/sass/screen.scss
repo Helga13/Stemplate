@@ -1728,7 +1728,7 @@ footer .logo a{
 }
 
 .catalog_content .item-wrap {
-	width: 23.44% !important;
+	width: 23.43% !important;
 	margin-bottom: 50px;
 	a {
 		position: absolute;
@@ -2876,12 +2876,17 @@ li.srch-block {
 	float: left; */
 }
 
-.accordions{
+.faq_content .accordions,
+.my-orders .accordions{
 width: 61.5%;
 	/* 800px/1300px */
 	margin-bottom: 180px;
 	margin-right: 7.69%;
 	float: left;
+}
+
+.my-orders .accordions{
+    width: 805px;
 }
 
 /* accordion */
@@ -2981,8 +2986,9 @@ width: 61.5%;
 .have-questions,
 .your-payment,
 .detail{
-	width: 30.72%;
-	float: left;
+	/*width: 30.72%;
+	float: right;*/
+    overflow: hidden;
 	border: 2px solid $pinkColor;
 	padding: 50px 30px;
 	box-sizing: border-box;
@@ -3213,7 +3219,8 @@ width: 61.5%;
 }
 
 .your-payment.customer-info{
-	width: 61.92%; /* 805px/1300px */
+	/*width: 61.92%; /* 805px/1300px */
+    overflow: hidden;
 	padding: 55px 50px;
 	border: none;
 	background: #fff;
@@ -3586,7 +3593,7 @@ input[type="checkbox"]:checked + label span::after {
 }
 .contact-list li{
 	display: inline-block;
-	width: 19.75%;
+	width: 19.67%;
 	vertical-align: top;
 	line-height: 1.75em;
 	dl:hover dt{
@@ -3637,14 +3644,14 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 .contact-form > .row > div:first-child{
-	width: 44.2%; /* 350px/805px */
+	width: 44.15%; /* 350px/805px */
 	padding-right: 5.71%; /* 40px/805px */
 //	border-right: 1px solid #ebebeb;
 	float: left;
 }
 
 .contact-form > .row > div:last-child{
-	width: 44.2%; /* 350px/700px */
+	width: 44.15%; /* 350px/700px */
 	padding-left: 5.71%;
 	border-left: 1px solid #ebebeb;
 	float: right;
@@ -4016,6 +4023,23 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 @media screen and (max-width: 1280px) {
+    section.content ul.advantages li p,
+    section.content ul.advantages li.dress p{
+        padding: 100px 0 40px; 
+        padding-right: 10px;
+    }
+    section.content ul.advantages li.pen p{
+        padding-right: 0px;
+    }
+    
+    section.content ul.advantages li.cost::before,
+    section.content ul.advantages li.scissors::before,
+    section.content ul.advantages li.dress::before,
+    section.content ul.advantages li.pen::before{
+       left: 40%;
+        transform: translateX(-50%); 
+    }
+    
    .photo-frame .images {
         width: 77%;
         float: left;
@@ -4038,6 +4062,44 @@ input[type="checkbox"]:checked + label span::after {
     footer .mid-col .footer-item-icons img {
         margin-right: 15px;
     }
+    
+    .my-orders .accordions{
+        margin-bottom: 40px;
+    }
+    
+    .right-col-reminder{
+        float: none;
+        width: 805px;
+        margin-top: 0;
+    }
+    
+    .contact-form,
+    .cart-block,
+    .checkout-block,
+    .faq_content .accordions{
+        margin-right: 35px;
+    }
+    
+    .your-payment.customer-info{
+       padding: 55px 30px; 
+    }
+    
+    .your-payment.customer-info .contact-details{
+        padding-right: 20px;
+    }
+    .your-payment.customer-info .paiment-meth {
+        padding-left: 20px;
+    }
+    
+    .login-for-checkout{
+       padding: 20px 23px; 
+    }
+    
+    .checkout-block {
+        width: 36.5%;
+    }
+    
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -4054,4 +4116,30 @@ input[type="checkbox"]:checked + label span::after {
             }
         }
     }
+    
+    .popup_search{
+        .personal-search{
+            padding-left: 150px;
+        }
+    }
+    
+    .articles-inner_title,
+    .articles-inner_subtitle,
+    .right-text,
+    .socials{
+        width: 66%;
+    }
+    
+    .left-text{
+        width: 32%;
+        p{
+           padding-left: 110px; 
+        }
+    }
+    
+    .contact-list li{
+        width: 29.5%;
+        margin-bottom: 15px;
+    }
+    
 }
