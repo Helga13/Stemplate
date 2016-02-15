@@ -269,6 +269,11 @@ $(document).ready(function () {
         $('.popup__overlay').removeClass('menu-open')
             //	$('body').css('overflow', 'auto');
     });
+     $('[data-id = subscribe-to-news]').click(function (e) {
+        e.preventDefault();
+        $('.popup__overlay').removeClass('menu-open')
+            //	$('body').css('overflow', 'auto');
+    });
 
     // переключение языков в popup
 
@@ -381,14 +386,180 @@ $(document).ready(function () {
 
     // popup leave-review Rate product
 
-    $('.popup_leave-review .stars').click(function () {
-        if ($(this).hasClass('marked')) {
-            $(this).removeClass('marked');
-        } else {
-            $(this).addClass('marked');
+//    $('.popup_leave-review .stars').click(function () {
+//        if ($(this).hasClass('marked')) {
+//            $(this).removeClass('marked');
+//        } else {
+//            $(this).addClass('marked');
+//        }
+//    });
+	
+	// popup personal
+	
+	$('[data-id = personal]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_personal').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_personal').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
         }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	$('[data-id = forgot-password]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	$('[data-id = create-account]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	
+	// popup forgot-password
+	
+	$('[data-id = forgot-password]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_forgot-password').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_forgot-password').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_forgot-password').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_forgot-password').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	
+	// popup create-account
+	
+	$('[data-id = create-account]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_create-account').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_forgot-password').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_create-account').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_create-account').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	$('[data-id = offer]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_create-account').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	
+	// popup offer
+	
+	$('[data-id = offer]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_offer').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_offer').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_offer').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_offer').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+	
+	// popup  subscribe-to-news
+	
+	$('[data-id = subscribe-to-news]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_subscribe-to-news').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_subscribe-to-news').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_subscribe-to-news').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_subscribe-to-news').css('display', 'none');
+        $('body').css('overflow', 'auto');
     });
 
+	// popup  search
+	
+	$('[data-id =  popup-search]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_search').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_search').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_search').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_search').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+
+	$('button.search__btn').hover(function(){
+		$(this).siblings('input[type=search]').css({'border': '1px solid #ff0078', 'transition': 'border 0.25s ease'});
+	}, function () {
+		$(this).siblings('input[type=search]').css({'border': '1px solid #d7d7d7'});
+});
+    
+    // popup personal login
+	
+	$('[data-id = personal-login]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal-login').css('display', 'block');
+        $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
+    })
+    $('.overlay_personal-login').click(function (event) {
+        e = event || window.event
+        if (e.target == this) {
+            $('.overlay_personal-login').css('display', 'none');
+            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+        }
+    })
+    $('.popup__close_cross').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal-login').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+    $('[data-id = forgot-password]').click(function (e) {
+        e.preventDefault();
+        $('.overlay_personal-login').css('display', 'none');
+        $('body').css('overflow', 'auto');
+    });
+    
 
     // accorgion faq	
 
