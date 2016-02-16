@@ -372,6 +372,7 @@ section.main-menu {
 				}
 
 			}
+			
 			.cart{
 				padding-right: 0;
 			}
@@ -408,6 +409,47 @@ section.main-menu {
 			}
 			.cart:hover span{
 				color: $pinkColor;
+			}
+			
+			.personal{
+				position: relative;
+			}
+			.personal > .personal-hover{
+				display: none;
+				background: #fff;
+				padding: 15px 25px;
+				box-sizing: border-box;
+				height: 160px;
+				li{
+					padding: 0;
+					font-family: $P22UndergroundCYPro-Demi;
+					text-transform: uppercase;
+					font-size: 12px;
+					letter-spacing: 0.1em;
+					width: 100%;
+					text-align: left;
+					a{
+						display: block;
+    					color: $mainDarkColor;
+						padding: 12px 0;
+						width: 100%;
+						height: auto;
+						@include transition(color);
+					}
+					a.active{
+						color: $pinkColor;
+					}
+					a:hover{
+    					color: $pinkColor;
+					}
+				}
+			}
+			.personal:hover  > .personal-hover{
+				display: block;
+				position: absolute;
+				top: 60px;
+				left: 20px;
+				width: 148px;
 			}
 		}
 	}
