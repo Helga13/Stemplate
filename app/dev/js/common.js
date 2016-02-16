@@ -54,11 +54,11 @@ $(document).ready(function () {
         }
 
         if ($(window).scrollTop() > 412) {
-
             $('.header-main').addClass('header-fix');
-
+            $('section.second-menu').css({'position': 'fixed','height': '90px', 'top': '10px', 'bottom': ''});
         } else {
             $('.header-main').removeClass('header-fix');
+            $('section.second-menu').css({'position': 'absolute','height': '', 'bottom': '0', 'top': ''});
         }
 
         // поведение хидера на всех остальных
@@ -104,9 +104,11 @@ $(document).ready(function () {
         if ($(window).scrollTop() > 115) {
 
             $('.header-other').addClass('header-fix');
+            $('.header-other section.second-menu').css({'position': 'fixed', 'height': '90px', 'top': '10px', 'bottom': ''});
 
         } else {
             $('.header-other').removeClass('header-fix');
+            $('.header-other section.second-menu').css({'position': 'absolute', 'height': '', 'bottom': '0', 'top': ''});
         }
 
     });
@@ -185,8 +187,6 @@ $(document).ready(function () {
 
 
 
-
-
     //$('.switcher').hover(function (e) {
     //	
     //	window.initHandler = setTimeout( handler, 400 );
@@ -202,39 +202,10 @@ $(document).ready(function () {
     //});
 
 
-
-
-
-    //-------------------------------------------------------------------------
-    // новое меню
-
-    //	$('.menu__btn').hover(function (e) {
-    //		e.preventDefault();
-    //		$('a').removeClass('is-active');
-    //		$(this).addClass('is-active');
-    //		
-    //		$(this).parent().parent().addClass('is-open');
-    //		
-    //		var tab = $(this).attr('href');
-    //		$('.menu__tab').not(tab).css({
-    //			'display': 'none'
-    //		});
-    //		$(tab).fadeIn(300);
-    //
-    //	},function(){
-    //		$(this).removeClass('is-active');
-    //		$('.menu').removeClass('is-open');
-    //		
-    //	});
-
-
-
-
-
     //-------------------------------------------------------------------------
 
     // переход по табам
-
+    
     $('.tab a').click(function (e) {
         e.preventDefault();
         $('a').removeClass('tab-link_active');
@@ -246,7 +217,10 @@ $(document).ready(function () {
         $(tab).fadeIn(300);
 
     });
+    
 
+    //------------------------------------------------------------------------
+    
     // scroll to top
 
     $(window).scroll(function () {
@@ -326,7 +300,20 @@ $(document).ready(function () {
         width: '100%'
     });
 
+    // переход по табам при смене таблицы размеров в catalog-inner-----------
 
+    
+        $('.ms-drop').find('label').on('click', function(){
+            var sel = $(this).parents('.choose-block').find('option:selected').attr('href');
+        //console.log(sel);
+            
+        $('.size-table').not(sel).css({
+            'display': 'none'
+        }); 
+            $(sel).fadeIn(300);   
+});
+    
+      
 
     // catalog-inner слайдер с миниатюрами
 

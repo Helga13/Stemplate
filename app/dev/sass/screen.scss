@@ -165,7 +165,7 @@ figure {
 	height: 512px;
 	position: relative;
 	z-index: 5;
-	width: 100%;
+	/* width: 100%; */
 	top: 0;
 	left: 0;
 		.bg-opacity {
@@ -264,11 +264,11 @@ figure {
 		height: 100px;
 	}
 	.switcher{
-		display: inline-block;
+		/* display: inline-block;
 		position: fixed;
 		top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+		        left: 50%;
+		        transform: translateX(-50%); */
 //		left: 35.6%;
 	}
 	//section.second-menu .switcher .content-hovered
@@ -393,6 +393,7 @@ section.main-menu {
     			line-height: 20px;
     			padding: 2px 0;
 				text-indent: 9px;
+                font-family: $P22UndergroundCYPro-Demi;
 				@include transition(color);
 			}
 			.cart a svg path[fill='#E1E1E1'] {
@@ -702,9 +703,10 @@ section.second-menu .switcher.is-open .categories > a::after{
 
 section.second-menu {
 	position: absolute;
-	bottom: 0;
 	width: 100%;
 	left: 0;
+    bottom: 0;
+    min-width: 980px;
 }
 
 .overlay {
@@ -808,6 +810,7 @@ section.content {
 			position: relative;
 			border-radius: $borderRadius;
 			background-color: transparent;
+            z-index: 0;
 			@include transition(background-color);
 			img {
 				position: absolute;
@@ -967,6 +970,7 @@ section.content {
 			height: 400px;
 			overflow: hidden;
 			border-radius: $borderRadius;
+            z-index: 0;
 			.template-sale {
 				position: absolute;
 				right: 16px;
@@ -1185,7 +1189,7 @@ section.content {
 			}
 		}
 		a:hover + div + h3 {
-			color: $pinkColorDarker;
+			color: $pinkColor;
 		}
 		p {
 			margin: 9px 0 11px;
@@ -1198,6 +1202,7 @@ section.content {
 			width: 100%;
 			height: 200px;
 			object-fit: cover;
+            z-index: 0;
 			img {
 				position: absolute;
 				top: 50%;
@@ -1836,6 +1841,13 @@ footer .logo a{
 
 .ms-drop ul > li:hover {
 	color: $pinkColorDarker;
+}
+
+/* табы в catalog-inner с изменением размера */
+
+.size_tab-content #european,
+.size_tab-content #russian{
+    display: none;
 }
 
 .sort-block .ms-choice,
@@ -4114,7 +4126,7 @@ input[type="checkbox"]:checked + label span::after {
     section.content ul.advantages li.scissors::before,
     section.content ul.advantages li.dress::before,
     section.content ul.advantages li.pen::before{
-       left: 40%;
+           left: 40%;
         transform: translateX(-50%); 
     }
     
