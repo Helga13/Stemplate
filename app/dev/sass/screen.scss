@@ -4220,6 +4220,17 @@ input[type="checkbox"]:checked + label span::after {
         left: -244px;
     }
     
+    section.content .banners .banner-wrap_h190{
+       height: 140px; 
+    }
+    section.content .banners .banner-wrap_h400{
+        height: 295px;
+    }
+    
+    .m-bottom20 {
+        margin-bottom: 15px;
+    }
+    
     footer {
         .mid-col {
             .footer-nav li{
