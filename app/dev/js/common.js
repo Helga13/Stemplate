@@ -310,9 +310,21 @@ $(document).ready(function () {
         $('.size-table').not(sel).css({
             'display': 'none'
         }); 
-            $(sel).fadeIn(300);   
+        $('.size-table').not(sel).find('input:checked').prop('checked', false)
+            $(sel).fadeIn(300); 
+        $('.size-table').not(sel).find('li input[type=checkbox]+label').removeClass('marked');    
 });
     
+    
+    // catalog-inner, marked sizes
+
+    //$('.size-table li input[type=checkbox]+label').on('click', function () {
+    //    if ($(this).hasClass('marked')) {
+    //        $(this).removeClass('marked');
+    //    } else {
+    //        $(this).addClass('marked');
+    //    }
+    //});
       
 
     // catalog-inner слайдер с миниатюрами
@@ -337,15 +349,6 @@ $(document).ready(function () {
 
     });
 
-    // catalog-inner, marked sizes
-
-    $('.size-table li').on('click', function () {
-        if ($(this).hasClass('marked')) {
-            $(this).removeClass('marked');
-        } else {
-            $(this).addClass('marked');
-        }
-    });
 
     // popup size-guid
 
