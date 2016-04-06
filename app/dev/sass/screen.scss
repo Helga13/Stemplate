@@ -3422,6 +3422,82 @@ form.js-validate .form-error{
 	margin-bottom: 0;
 }
 
+/* style after fix radio payment */
+
+.choose-payment.show .show-all a:before{
+    content: 'Сollapse the list';
+    
+}
+.choose-payment .show-all a:before{
+    content: 'Show all payment';
+}
+.choose-payment .show-all{
+	.caret{
+		width: 15px;
+		height: 9px;
+		top: 5px;
+		right: 0;
+		transform: translate3d(0, 0, 0);
+		&::after {
+			content: '';
+			height: 1px;
+			width: 9px;
+			transition: transform 0.25s ease, background-color 0.25s ease;
+			top: 0;
+			left: 0;
+			transform: rotate(45deg);
+			background-color: $pinkColor;
+			position: absolute;
+		}
+		&::before {
+			content: '';
+			height: 1px;
+			width: 9px;
+			transition: transform 0.25s ease, background-color 0.25s ease;
+			top: 0;
+			right: 0;
+			transform: rotate(-45deg);
+			background-color: $pinkColor;
+			position: absolute;
+		}
+	}
+	.leave-review:hover + .caret{
+		&::after{
+			background-color: $pinkColorDarker;
+		}
+		&::before{
+			background-color: $pinkColorDarker;
+		}
+	}
+} 
+.choose-payment.show .show-all{
+	.caret{
+		&::after {
+			content: '';
+			transform: rotate(-45deg);
+		}
+		&::before {
+			content: '';
+			transform: rotate(45deg);
+		}
+	}
+	.leave-review:hover + .caret{
+		&::after{
+			background-color: $pinkColorDarker;
+		}
+		&::before{
+			background-color: $pinkColorDarker;
+		}
+	}
+} 
+
+.choose-payment:not(.show) > div:not(.vis){
+	display: none;
+}
+.choose-payment.show > div:not(.vis){
+	display: block;
+}
+
 /* checkbox begin */
 
 .contact-details .checkbox-block{

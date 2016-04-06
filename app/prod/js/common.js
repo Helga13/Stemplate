@@ -661,7 +661,12 @@ $(document).ready(function () {
         }
     }
 
-
-
+// choose payment
+	
+	$("p.show-all").click(function (e) {
+		e.preventDefault();
+      $(this).parent('.choose-payment').toggleClass("show");
+    });
+	
 
 });
