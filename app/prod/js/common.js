@@ -616,6 +616,7 @@ $(document).ready(function () {
     // валидация форм
 
 
+/*переделал в своем custom.js
     (function () {
         var form_validate = $('.js-validate'),
             success = $('.contact-form_success'),
@@ -642,11 +643,12 @@ $(document).ready(function () {
         };
     })();
 
+
     function removes(forms, success) {
         forms.removeClass('is-active');
         success.addClass('is-active');
     };
-
+*/
     function initRate() {
         if ($('#rate-product').find('input:checked').length) {
             $('#rate-product + span.form-error').remove();
@@ -660,12 +662,7 @@ $(document).ready(function () {
         }
     }
 
-// choose payment
-	
-	$("p.show-all").click(function (e) {
-		e.preventDefault();
-      $(this).parent('.choose-payment').toggleClass("show");
-    });
-	
+
+
 
 });
