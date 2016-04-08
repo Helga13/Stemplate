@@ -38,17 +38,13 @@ $(document).ready(function () {
         });
 
         if ($(window).scrollTop() >= 297) {
-
             $('.header').addClass('header-main');
         } else {
-
             $('.header').removeClass('header-main');
         }
 
         if ($(window).scrollTop() >= 350) {
-
             $('.logo-block').addClass('logo-remove');
-
         } else {
             $('.logo-block').removeClass('logo-remove');
         }
@@ -86,17 +82,13 @@ $(document).ready(function () {
         });
 
         if ($(window).scrollTop() >= 5) {
-
             $('.header-other').addClass('header-main');
         } else {
-
             $('.header-other').removeClass('header-main');
         }
 
         if ($(window).scrollTop() >= 5) {
-
             $('.logo-block').addClass('logo-remove');
-
         } else {
             $('.logo-block').removeClass('logo-remove');
         }
@@ -120,8 +112,7 @@ $(document).ready(function () {
         if(windowHeight < 670){
             $('.popup p').css('display', 'none');
             $('.popup .menu-list').css({'margin-top': '20px', 'margin-bottom':'10px'});
-        }else{
-        
+        }else{ 
             $('.popup p').css('display', 'inline'); 
             $('.popup .menu-list').css({'margin-top': '120px', 'margin-bottom':'40px'});
         }
@@ -205,7 +196,11 @@ $(document).ready(function () {
     //-------------------------------------------------------------------------
 
     // переход по табам
-    
+	
+	if($('.reviews').hasClass('tab-link_active')){
+		   $('.catalog-inner-tabs_content #reviews').css({'display': 'block'});
+		};
+	
     $('.tab a').click(function (e) {
         e.preventDefault();
         $('a').removeClass('tab-link_active');
@@ -215,7 +210,11 @@ $(document).ready(function () {
             'display': 'none'
         });
         $(tab).fadeIn(300);
-
+			
+		if($('.reviews').hasClass('tab-link_active')){
+			console.log(true);
+		   $('.catalog-inner-tabs_content #reviews #reviews').css({'display': 'block'});
+		};
     });
     
 
@@ -457,7 +456,7 @@ $(document).ready(function () {
         $('.overlay_create-account').css('display', 'block');
         $('body').css('overflow', 'hidden'); // убирает основную полосу прокрутки
     })
-    $('.overlay_forgot-password').click(function (event) {
+    $('.overlay_create-account').click(function (event) {
         e = event || window.event
         if (e.target == this) {
             $('.overlay_create-account').css('display', 'none');
