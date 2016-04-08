@@ -1,0 +1,8 @@
+.tile__gallery {white-space:nowrap;}
+.loading {display:none;}
+.ajax_loading .load {display:block;}
+a.pay_button {float:left;}
+.ask_button {display:block;}
+.size_tab-content .size-table li input[type=checkbox].in_basket+label {background-color:#69e592;color:#181818;}
+.my-orders .accord {clear:both;}
+.catalog_content {clear:both;}
