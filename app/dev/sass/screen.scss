@@ -2619,7 +2619,7 @@ button.create_account:hover{
 .size-guide-content,
 .leave-review-content{
 	padding: 20px 0;
-	overflow: hidden;
+	@include clearfix;
 	.h2 {
 		letter-spacing: .1em;
 		margin-bottom: 30px;
