@@ -2608,7 +2608,8 @@ button.create_account:hover{
 	}
 }
 
-.popup__close_cross {
+.popup__close_cross,
+.popup__close_cross-offer{
 	position: absolute;
 	top: 25px;
 	right: 25px;
@@ -3400,33 +3401,46 @@ form.js-validate .form-error{
 	line-height: 1.375em;
 }
 
-.choose-payment input[type="radio"] + label{
-	display: inline-block;
+.choose-payment > .pay{
+	height: 45px;
+	line-height: 45px;
 	position: relative;
-	width: auto;
-	margin-bottom: 17px;
-	margin-right: 80px;
+	transition: background 0.25s ease;
 }
 
-.choose-payment input[type="radio"]+label:hover::after{
+.choose-payment > .pay:hover{
+//.choose-payment > .pay{
+	background: #fafafa;
+//	background: green;
+//	border: 1px solid #fff;
+}
+
+.choose-payment .pay input[type="radio"] + label{
+	display: inline-block;
+//	position: relative;
+	width: auto;
+	margin: 0;
+//	vertical-align: middle;
+//	line-height: 45px;
+}
+
+.choose-payment .pay input[type="radio"] + label img{
+	vertical-align: middle;
+//	line-height: 45px;
+}
+
+.choose-payment .pay:hover input[type="radio"]+label::after{
 	content: attr(for);
 	position: absolute;
 	text-transform: capitalize;
-    bottom: 8px;
-	left: 140%;
+//	left: 140%;
+	top: 0;
+	right: 25px
 }
 
-.choose-payment input[type="radio"]+label[for="qiwi"]:hover::after{
-	content: attr(for);
-    bottom: 12px;
-}
-
-.choose-payment input[type="radio"]+label span{
-	bottom: 10px;
-}
-
-.choose-payment input[type="radio"]+label:nth-child(3) span{
-	bottom: 5px;
+.choose-payment .pay input[type="radio"]+label span{
+//	bottom: 10px;
+	position: static;
 }
 
 .choose-payment p.show-all{

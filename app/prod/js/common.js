@@ -468,11 +468,11 @@ $(document).ready(function () {
         $('.overlay_create-account').css('display', 'none');
         $('body').css('overflow', 'auto');
     });
-	$('[data-id = offer]').click(function (e) {
-        e.preventDefault();
-        $('.overlay_create-account').css('display', 'none');
-        $('body').css('overflow', 'auto');
-    });
+//	$('[data-id = offer]').click(function (e) {
+//        e.preventDefault();
+//        $('.overlay_create-account').css('display', 'none');
+//        $('body').css('overflow', 'auto');
+//    });
 	
 	// popup offer
 	
@@ -485,14 +485,16 @@ $(document).ready(function () {
         e = event || window.event
         if (e.target == this) {
             $('.overlay_offer').css('display', 'none');
-            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
+//            $('body').css('overflow', 'auto'); // возвращает полосу прокрутки
         }
     })
-    $('.popup__close_cross').click(function (e) {
+    $('.popup__close_cross-offer').click(function (e) {
         e.preventDefault();
         $('.overlay_offer').css('display', 'none');
-        $('body').css('overflow', 'auto');
+//        $('body').css('overflow', 'auto');
     });
+	
+	
 	
 	// popup  subscribe-to-news
 	
