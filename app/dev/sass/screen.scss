@@ -1918,7 +1918,8 @@ footer .logo a{
 	transform: translate3d(-50%, -50%, 0); 
 	object-fit: cover;
 	/*max-width: 100%; */
-	/*width: 100%;*/  /*чтобы растягивать маленькие фото*/
+	width: 100%;  /*чтобы растягивать маленькие фото*/
+	height: 100%;
 	border-radius: $borderRadius;
 }
 
@@ -3404,15 +3405,14 @@ form.js-validate .form-error{
 .choose-payment > .pay{
 	height: 45px;
 	line-height: 45px;
+	margin-left: -10px;
+	padding-left: 10px;
 	position: relative;
 	transition: background 0.25s ease;
 }
 
 .choose-payment > .pay:hover{
-//.choose-payment > .pay{
 	background: #fafafa;
-//	background: green;
-//	border: 1px solid #fff;
 }
 
 .choose-payment .pay input[type="radio"] + label{
@@ -3453,13 +3453,23 @@ form.js-validate .form-error{
 
 /* style after fix radio payment */
 
-.choose-payment.show .show-all a:before{
-    content: 'Сollapse the list';
-    
+//.choose-payment.show .show-all a:before{
+//    content: 'Сollapse the list';
+//    
+//}
+//.choose-payment .show-all a:before{
+//    content: 'Show all payment';
+//}
+
+.choose-payment.show .show-all .collapsed{
+	display: none;
 }
-.choose-payment .show-all a:before{
-    content: 'Show all payment';
+
+.choose-payment:not(.show) .show-all .shown{
+	display: none;
 }
+
+
 .choose-payment .show-all{
 	.caret{
 		width: 15px;

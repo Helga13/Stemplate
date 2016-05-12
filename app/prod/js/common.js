@@ -666,7 +666,7 @@ $(document).ready(function () {
 	
 	$("p.show-all").click(function (e) {
 		e.preventDefault();
-      $(this).parent('.choose-payment').toggleClass("show");
+        $(this).parent('.choose-payment').toggleClass("show");
     });
 	
 
