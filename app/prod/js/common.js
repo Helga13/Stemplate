@@ -298,20 +298,42 @@ $(document).ready(function () {
         single: true,
         width: '100%'
     });
+	
+	
+	$('select.select-sort-popup').multipleSelect({
+        single: true,
+        width: '100%'
+    });
 
     // переход по табам при смене таблицы размеров в catalog-inner-----------
 
     
-        $('.ms-drop').find('label').on('click', function(){
-            var sel = $(this).parents('.choose-block').find('option:selected').attr('href');
-        //console.log(sel);
-            
+        $('.select-sort .ms-drop').not('.ms-drop-popup').find('label').on('click', function(){
+            var sel = $(this).parents('.choose-block').not('.choose-block-popup').find('option:selected').attr('href');
+//         console.log("1");   
         $('.size-table').not(sel).css({
             'display': 'none'
         }); 
         $('.size-table').not(sel).find('input:checked').prop('checked', false)
             $(sel).fadeIn(300); 
-        $('.size-table').not(sel).find('li input[type=checkbox]+label').removeClass('marked');    
+        $('.size-table').not(sel).find('li input[type=checkbox]+label').removeClass('marked');     
+
+});
+	
+		
+//	смена таблиц размеров в popup------------
+		
+	
+	$('.select-sort-popup .ms-drop').find('label').on('click', function(){
+		
+            var selP = $(this).parents('.choose-block').find('option:selected').attr('data-href');
+//        console.log(selP);
+            
+        $('.size-table-inner').not(selP).css({
+            'display': 'none'
+        }); 
+        
+		$(selP).fadeIn(300);  
 });
     
     
@@ -671,3 +693,109 @@ $(document).ready(function () {
 	
 
 });
+
+// js
+
+// popup size-guide replace size tables
+
+function show(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function showE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function showR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================
+
+function jShow(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('j-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function jShowE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('j-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function jShowR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('j-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================
+
+function mShow(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('m-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function mShowE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('m-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function mShowR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('m-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================
+
+function eShow(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function eShowE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function eShowR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================
+
+function bShow(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function bShowE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function bShowR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('b-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================
+
+function jnShow(num){
+	for (var i = 1; i < 3; i++) 
+		document.getElementById ('jn-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function jnShowE(num){
+	for (var i = 3; i < 5; i++) 
+		document.getElementById ('jn-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+function jnShowR(num){
+	for (var i = 5; i < 7; i++) 
+		document.getElementById ('jn-table' + i).style.display = (i == num) ? 'block' : 'none'
+};
+
+// ===================================

@@ -1705,7 +1705,7 @@
 
 	<!--------	end popup personal-login  ------->
 	
-	<!--------	popup size-guide  ------->
+	    <!--------	popup size-guide  ------->
 
 
     <div class="overlay_size-guid">
@@ -1750,93 +1750,1940 @@
                                     <li>Waist — measure around natural waistline</li>
                                     <li>Hips — measure 20cm down from the natural waistline</li>
                                 </ul>
+                                <p class="h3">2. determine the size</p>
+
+								<div class="det-size">
+									
+
+
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-d"  selected>international size</option>
+												<option data-href="#european-d" >european size</option>
+												<option data-href="#russian-d" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-d" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters1" type="radio" name='choose1' checked onclick="show(1)"/>
+											<label for="centimeters1"><span></span>Centimeters</label>
+											<input id="inches1" type="radio" name='choose1' onclick="show(2)"/>
+											<label for="inches1"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-d" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters2" type="radio" name='choose2' checked onclick="showE(3)"/>
+											<label for="centimeters2"><span></span>Centimeters</label>
+											<input id="inches2" type="radio" name='choose2' onclick="showE(4)"/>
+											<label for="inches2"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-d" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters3" type="radio" name='choose3' checked onclick="showR(5)"/>
+											<label for="centimeters3"><span></span>Centimeters</label>
+											<input id="inches3" type="radio" name='choose3' onclick="showR(6)"/>
+											<label for="inches3"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+
+									
+								</div>
+                            
                             </div>
 
                             <div id="jackets" class="tab-content">
                                 <p>jackets</p>
+                                <div class="det-size">
+									
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-j"  selected>international size</option>
+												<option data-href="#european-j" >european size</option>
+												<option data-href="#russian-j" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-j" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters4" type="radio" name='choose4' checked onclick="jShow(1)"/>
+											<label for="centimeters4"><span></span>Centimeters</label>
+											<input id="inches4" type="radio" name='choose4' onclick="jShow(2)"/>
+											<label for="inches4"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="j-table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>16</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="j-table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-j" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters5" type="radio" name='choose5' checked onclick="jShowE(3)"/>
+											<label for="centimeters5"><span></span>Centimeters</label>
+											<input id="inches5" type="radio" name='choose5' onclick="jShowE(4)"/>
+											<label for="inches5"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="j-table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="j-table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-j" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters6" type="radio" name='choose6' checked onclick="jShowR(5)"/>
+											<label for="centimeters6"><span></span>Centimeters</label>
+											<input id="inches6" type="radio" name='choose6' onclick="jShowR(6)"/>
+											<label for="inches6"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="j-table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="j-table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+
+									
+								</div>
                             </div>
                             <div id="misses" class="tab-content">
                                 <p>misses</p>
+                                <div class="det-size">
+									
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-m"  selected>international size</option>
+												<option data-href="#european-m" >european size</option>
+												<option data-href="#russian-m" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-m" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters7" type="radio" name='choose7' checked onclick="mShow(1)"/>
+											<label for="centimeters7"><span></span>Centimeters</label>
+											<input id="inches7" type="radio" name='choose7' onclick="mShow(2)"/>
+											<label for="inches7"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="m-table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>26</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="m-table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-m" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters8" type="radio" name='choose8' checked onclick="mShowE(3)"/>
+											<label for="centimeters8"><span></span>Centimeters</label>
+											<input id="inches8" type="radio" name='choose8' onclick="mShowE(4)"/>
+											<label for="inches8"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="m-table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="m-table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-m" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters9" type="radio" name='choose9' checked onclick="mShowR(5)"/>
+											<label for="centimeters9"><span></span>Centimeters</label>
+											<input id="inches9" type="radio" name='choose9' onclick="mShowR(6)"/>
+											<label for="inches9"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="m-table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="m-table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+									
+								</div>
                             </div>
                             <div id="evening" class="tab-content">
                                 <p>evening/prom</p>
+                                <div class="det-size">
+									
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-e"  selected>international size</option>
+												<option data-href="#european-e" >european size</option>
+												<option data-href="#russian-e" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-e" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters10" type="radio" name='choose10' checked onclick="eShow(1)"/>
+											<label for="centimeters10"><span></span>Centimeters</label>
+											<input id="inches10" type="radio" name='choose10' onclick="eShow(2)"/>
+											<label for="inches10"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="e-table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>36</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="e-table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-e" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters11" type="radio" name='choose11' checked onclick="eShowE(3)"/>
+											<label for="centimeters11"><span></span>Centimeters</label>
+											<input id="inches11" type="radio" name='choose11' onclick="eShowE(4)"/>
+											<label for="inches11"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="e-table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="e-table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-e" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters12" type="radio" name='choose12' checked onclick="eShowR(5)"/>
+											<label for="centimeters12"><span></span>Centimeters</label>
+											<input id="inches12" type="radio" name='choose12' onclick="eShowR(6)"/>
+											<label for="inches12"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="e-table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="e-table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+									
+								</div>
                             </div>
                             <div id="bridal" class="tab-content">
                                 <p>bridal</p>
+                                <div class="det-size">
+									
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-b"  selected>international size</option>
+												<option data-href="#european-b" >european size</option>
+												<option data-href="#russian-b" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-b" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters13" type="radio" name='choose13' checked onclick="bShow(1)"/>
+											<label for="centimeters13"><span></span>Centimeters</label>
+											<input id="inches13" type="radio" name='choose13' onclick="bShow(2)"/>
+											<label for="inches13"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="b-table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>46</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="b-table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-b" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters14" type="radio" name='choose14' checked onclick="bShowE(3)"/>
+											<label for="centimeters14"><span></span>Centimeters</label>
+											<input id="inches14" type="radio" name='choose14' onclick="bShowE(4)"/>
+											<label for="inches14"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="b-table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="b-table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-b" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters15" type="radio" name='choose15' checked onclick="bShowR(5)"/>
+											<label for="centimeters15"><span></span>Centimeters</label>
+											<input id="inches15" type="radio" name='choose15' onclick="bShowR(6)"/>
+											<label for="inches15"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="b-table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="b-table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+									
+								</div>
                             </div>
                             <div id="jeans" class="tab-content">
                                 <p>jeans</p>
+                                <div class="det-size">
+									
+									<!--               	выпадашка в модальном-->
+									<div class="choose-block">
+										<span><em>Choose:&nbsp;</em></span>
+										<div>
+											<select class="select-sort-popup" multiple="multiple">
+												<option data-href="#international-jn"  selected>international size</option>
+												<option data-href="#european-jn" >european size</option>
+												<option data-href="#russian-jn" >russian size</option>
+											</select>
+										</div>
+									</div>
+									<div class="size-table-content">
+										<div id="international-jn" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters16" type="radio" name='choose16' checked onclick="jnShow(1)"/>
+											<label for="centimeters16"><span></span>Centimeters</label>
+											<input id="inches16" type="radio" name='choose16' onclick="jnShow(2)"/>
+											<label for="inches16"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="jn-table1">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>56</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="jn-table2">
+												<thead>
+													<tr>
+														<th><em>Body Int</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="european-jn" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters17" type="radio" name='choose17' checked onclick="jnShowE(3)"/>
+											<label for="centimeters17"><span></span>Centimeters</label>
+											<input id="inches17" type="radio" name='choose17' onclick="jnShowE(4)"/>
+											<label for="inches17"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="jn-table3">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="jn-table4">
+												<thead>
+													<tr>
+														<th><em>Body Eu</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="russian-jn" class="size-table-inner">
+											<!--radiobutton begin-->
+											<input id="centimeters18" type="radio" name='choose18' checked onclick="jnShowR(5)"/>
+											<label for="centimeters18"><span></span>Centimeters</label>
+											<input id="inches18" type="radio" name='choose18' onclick="jnShowR(6)"/>
+											<label for="inches18"><span></span>Inches</label>
+											<!--radiobutton end-->
+											<table id="jn-table5">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>76</td>
+														<td>78</td>
+														<td>80</td>
+														<td>86</td>
+														<td>90</td>
+														<td>92</td>
+														<td>94</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>60</td>
+														<td>62</td>
+														<td>64</td>
+														<td>66</td>
+														<td>71</td>
+														<td>74</td>
+														<td>76</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>86</td>
+														<td>88</td>
+														<td>90</td>
+														<td>94</td>
+														<td>98</td>
+														<td>100</td>
+														<td>102</td>
+													</tr>
+												</tbody>
+											</table>
+											<table id="jn-table6">
+												<thead>
+													<tr>
+														<th><em>Body Rus</em></th>
+														<th><em>xs</em></th>
+														<th><em>xs-s</em></th>
+														<th><em>s</em></th>
+														<th><em>m</em></th>
+														<th><em>l</em></th>
+														<th><em>l-xl</em></th>
+														<th><em>xl</em></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Chest</td>
+														<td>25</td>
+														<td>27</td>
+														<td>29</td>
+														<td>31</td>
+														<td>33</td>
+														<td>35</td>
+														<td>37</td>
+													</tr>
+													<tr>
+														<td>Waist</td>
+														<td>25</td>
+														<td>26</td>
+														<td>27</td>
+														<td>28</td>
+														<td>29</td>
+														<td>30</td>
+														<td>31</td>
+													</tr>
+													<tr>
+														<td>Hips</td>
+														<td>35</td>
+														<td>36</td>
+														<td>37</td>
+														<td>38</td>
+														<td>39</td>
+														<td>40</td>
+														<td>41</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+									
+								</div>
                             </div>
 
-                            <p class="h3">2. determine the size</p>
-
-
-                            <!--radiobutton begin-->
-                            <input id="centimeters" type="radio" name='choose' checked/>
-                            <label for="centimeters"><span></span>Centimeters</label>
-                            <input id="inches" type="radio" name='choose' />
-                            <label for="inches"><span></span>Inches</label>
-                            <!--radiobutton end-->
-
-
-                            <!--               	выпадашка в модальном-->
-                            <div class="choose-block">
-                                <span><em>Choose:&nbsp;</em></span>
-                                <div>
-                                    <select class="select-sort" multiple="multiple">
-                                        <option value="1" selected>international size</option>
-                                        <option value="2">european size</option>
-                                        <option value="3">russian size</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th><em>Body</em></th>
-                                        <th><em>xs</em></th>
-                                        <th><em>xs-s</em></th>
-                                        <th><em>s</em></th>
-                                        <th><em>m</em></th>
-                                        <th><em>l</em></th>
-                                        <th><em>l-xl</em></th>
-                                        <th><em>xl</em></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Chest</td>
-                                        <td>76</td>
-                                        <td>78</td>
-                                        <td>80</td>
-                                        <td>86</td>
-                                        <td>90</td>
-                                        <td>92</td>
-                                        <td>94</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Waist</td>
-                                        <td>60</td>
-                                        <td>62</td>
-                                        <td>64</td>
-                                        <td>66</td>
-                                        <td>71</td>
-                                        <td>74</td>
-                                        <td>76</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hips</td>
-                                        <td>86</td>
-                                        <td>88</td>
-                                        <td>90</td>
-                                        <td>94</td>
-                                        <td>98</td>
-                                        <td>100</td>
-                                        <td>102</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            
 
                         </div>
                         <!--   end of size-guide-tabs_content -->

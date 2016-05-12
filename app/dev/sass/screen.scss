@@ -1826,17 +1826,23 @@ footer .logo a{
 }
 
 .sort-block .ms-parent.select-sort:hover .ms-choice,
-.choose-block .ms-parent.select-sort:hover .ms-choice{
+.choose-block .ms-parent.select-sort:hover .ms-choice,
+.sort-block .ms-parent.select-sort-popup:hover .ms-choice,
+.choose-block .ms-parent.select-sort-popup:hover .ms-choice{
 	color: $pinkColorDarker;
 }
 
 .sort-block .ms-parent.select-sort:hover .ms-choice > div,
-.choose-block .ms-parent.select-sort:hover .ms-choice > div{
+.choose-block .ms-parent.select-sort:hover .ms-choice > div,
+.sort-block .ms-parent.select-sort-popup:hover .ms-choice > div,
+.choose-block .ms-parent.select-sort-popup:hover .ms-choice > div{
 	background: url('../img/svg/arrow-other-hover.svg') left top no-repeat;
 }
 
 .sort-block .ms-parent.select-sort:hover .ms-choice > div.open,
-.choose-block .ms-parent.select-sort:hover .ms-choice > div.open{
+.choose-block .ms-parent.select-sort:hover .ms-choice > div.open,
+.sort-block .ms-parent.select-sort-popup:hover .ms-choice > div.open,
+.choose-block .ms-parent.select-sort-popup:hover .ms-choice > div.open{
 	background: url('../img/svg/arrow-pink-dark.svg') left top no-repeat;
 }
 
@@ -1874,7 +1880,6 @@ footer .logo a{
 
 
 
-/* end sort by доработать!*/
 
 
 /* catalog-inner */
@@ -2719,7 +2724,60 @@ button.create_account:hover{
 	width: 38.6%; /* размер выпадающего меню в модальном окене catalog-inner.html */
 }
 
+#table2,
+#table4,
+#table6,
+#j-table2,
+#j-table4,
+#j-table6,
+#m-table2,
+#m-table4,
+#m-table6,
+#e-table2,
+#e-table4,
+#e-table6,
+#b-table2,
+#b-table4,
+#b-table6,
+#jn-table2,
+#jn-table4,
+#jn-table6{
+	display: none;
+}
 
+#table1,
+#table3,
+#table5,
+#j-table1,
+#j-table3,
+#j-table5,
+#m-table1,
+#m-table3,
+#m-table5,
+#e-table1,
+#e-table3,
+#e-table5,
+#b-table1,
+#b-table3,
+#b-table5,
+#jn-table1,
+#jn-table3,
+#jn-table5{
+	display: block;
+}
+
+.size-table-content > .size-table-inner{
+	display: none;
+}
+
+.size-table-content > #international-d,
+.size-table-content > #international-j,
+.size-table-content > #international-m,
+.size-table-content > #international-e,
+.size-table-content > #international-b,
+.size-table-content > #international-jn{
+	display: block;
+}
 
 
 /* radiobutton begin */
@@ -3461,14 +3519,10 @@ form.js-validate .form-error{
 //    content: 'Show all payment';
 //}
 
-.choose-payment.show .show-all .collapsed{
-	display: none;
-}
-
+.choose-payment.show .show-all .collapsed,
 .choose-payment:not(.show) .show-all .shown{
 	display: none;
 }
-
 
 .choose-payment .show-all{
 	.caret{
