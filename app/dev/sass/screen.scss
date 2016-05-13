@@ -597,6 +597,7 @@ section.second-menu {
 				width: 74.42%; /* 640px/860px */
 				float: left;
 				.item-wrap {
+					position: relative;
 					height: 270px;
 					width: 22.67%;
 					/* 145px/640px*100% ширина блока */
@@ -604,7 +605,7 @@ section.second-menu {
 					/* 20px/640px*100% ширина отступа */
 					float: left;
 					text-align: left;
-					cursor: pointer;
+//					cursor: pointer;
 					z-index: 0;
 					.img-wrap {
 						position: relative;
@@ -650,6 +651,13 @@ section.second-menu {
 							padding-left: 20px;
 						}
 					}
+				}
+				a{
+					position: absolute;
+					display: block;
+					height: 100%;
+					width: 100%;
+					z-index: 1;
 				}
 				.item-wrap:hover dt {
 					color: $pinkColor;
