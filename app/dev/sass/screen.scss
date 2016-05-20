@@ -64,6 +64,8 @@ h2,
 	text-transform: uppercase;
 	margin: 0;
 	font-size: 1.5em;
+	line-height: 1.5em;
+//	line-height: normal;
 	letter-spacing: 0.05em;
 }
 
@@ -2318,6 +2320,8 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 .overlay_forgot-password,
 .overlay_create-account,
 .overlay_offer,
+.overlay_return-policy,
+.overlay_guarantes,
 .overlay_subscribe-to-news,
 .overlay_search,
 .overlay_personal-login{
@@ -2339,6 +2343,8 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 .overlay_forgot-password:after,
 .overlay_create-account:after,
 .overlay_offer:after,
+.overlay_return-policy:after,
+.overlay_guarantes:after,
 .overlay_subscribe-to-news:after,
 .overlay_search:after,
 .overlay_personal-login:after{
@@ -2355,6 +2361,8 @@ section.content .tab.tab.catalog-inner-tabs .tab-link,
 .popup_forgot-password,
 .popup_create-account,
 .popup_offer,
+.popup_return-policy,
+.popup_guarantes,
 .popup_subscribe-to-news,
 .popup_search,
 .popup_personal-login{
@@ -2587,9 +2595,13 @@ button.create_account:hover{
 		}
 	}
 }
-.popup_offer{
+.popup_offer,
+.popup_return-policy,
+.popup_guarantes{
 	width: 803px;
-	.personal-offer{
+	.personal-offer,
+	.personal-return-policy,
+	.personal-guarantes{
 		.h2{
 			padding: 25px 0;
 		}
@@ -2623,7 +2635,9 @@ button.create_account:hover{
 }
 
 .popup__close_cross,
-.popup__close_cross-offer{
+.popup__close_cross-offer,
+.popup__close_cross-return-policy,
+.popup__close_cross-guarantes{
 	position: absolute;
 	top: 25px;
 	right: 25px;
