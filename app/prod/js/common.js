@@ -682,8 +682,10 @@ $(document).ready(function () {
 
     (function () {
         var form_validate = $('.js-validate'),
+//            success = $('.contact-form_success').not('.contact-form_success-subscribe'),
             success = $('.contact-form_success'),
             forms = $('.contact-form');
+//            forms = $('.contact-form').not('.contact-form-subscribe');
         if (form_validate.length) {
             form_validate.each(function () {
                 var form_this = $(this);
@@ -695,8 +697,9 @@ $(document).ready(function () {
                         initRate();
                     },
                     onSuccess: function ($form) {
+						console.log($form)
                         if ($form.hasClass('has-validation-callback')) {
-                            removes(forms, success);
+                            removes($form, $form.next());
                         }
 
                         return false;
@@ -708,8 +711,9 @@ $(document).ready(function () {
 
     function removes(forms, success) {
         forms.removeClass('is-active');
-        success.addClass('is-active');
+        success.addClass('is-active'); 
     };
+	
 
     function initRate() {
         if ($('#rate-product').find('input:checked').length) {

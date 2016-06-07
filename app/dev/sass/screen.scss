@@ -1134,11 +1134,18 @@ section.content {
 		.brazzers-gallery__page:hover .brazzers-gallery__button:after {
 			background-color: $pinkColor;
 		}
+		
+		&:hover .view-details{
+			opacity: 1;
+			bottom: 85px;
+		}
 	}
 
 	.tile__gallery:hover .brazzers-gallery__button{
 		opacity: 1;
 	}
+	
+	
 	
 	.tile__gallery:hover + .view-details,
 	.img-wrap:hover + .view-details{
@@ -4030,7 +4037,7 @@ input[type="checkbox"]:checked + label span::after {
 }
 
 .contact-form,
-.contact-form.contact-form_success,{
+.contact-form.contact-form_success{
 	display: none;
 }
 
