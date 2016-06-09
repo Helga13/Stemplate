@@ -3459,6 +3459,10 @@ width: 61.5%;
 	@include transition(border);
 }
 
+.contact-form textarea{
+	resize: none;
+}
+
 form.js-validate .error{
 	border-color: #ff0606!important;
 }
@@ -3960,6 +3964,7 @@ input[type="checkbox"]:checked + label span::after {
 
 #message{
 	height: 130px;
+	resize: none;
 }
 
 /* .contact-form textarea{
