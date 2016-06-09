@@ -1026,7 +1026,8 @@ section.content {
 		/*slider*/
 		.view-details {
 			position: absolute;
-			bottom: 73px;
+//			bottom: 73px;
+			top: 360px;
 			right: 13px;
 			display: block;
 			height: 30px;
@@ -1042,7 +1043,7 @@ section.content {
 			letter-spacing: .1em;
 			z-index: 3;
 			opacity: 0;
-			transition: opacity .25s ease, bottom .25s ease;
+			transition: opacity .25s ease, top .25s ease;
 		}
 		.tile__gallery {
 			position: absolute;
@@ -1137,7 +1138,8 @@ section.content {
 		
 		&:hover .view-details{
 			opacity: 1;
-			bottom: 85px;
+//			bottom: 85px;
+			top: 358px;
 		}
 	}
 
