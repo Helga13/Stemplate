@@ -203,17 +203,17 @@ $(document).ready(function () {
 	
     $('.tab a').click(function (e) {
         e.preventDefault();
-        $('a').removeClass('tab-link_active');
-        $(this).addClass('tab-link_active');
+//        $('a').removeClass('tab-link_active');
+        $(this).addClass('tab-link_active').siblings().removeClass('tab-link_active');
         var tab = $(this).attr('href');
         $('.tab-content').not(tab).css({
             'display': 'none'
         });
-        $(tab).fadeIn(300);
-			
+        $(tab).fadeIn(300)
+			  .find('.size-table-content .size-table-inner:first-child').css({'display': 'block'});
 		if($('.reviews').hasClass('tab-link_active')){
-			console.log(true);
-		   $('.catalog-inner-tabs_content #reviews #reviews').css({'display': 'block'});
+//			console.log(true);
+		   $('.catalog-inner-tabs_content #reviews').css({'display': 'block'});
 		};
     });
     
@@ -310,12 +310,13 @@ $(document).ready(function () {
     
         $('.select-sort .ms-drop').not('.ms-drop-popup').find('label').on('click', function(){
             var sel = $(this).parents('.choose-block').not('.choose-block-popup').find('option:selected').attr('href');
-//         console.log("1");   
+//         console.log("1"); 
         $('.size-table').not(sel).css({
             'display': 'none'
         }); 
+			
         $('.size-table').not(sel).find('input:checked').prop('checked', false)
-            $(sel).fadeIn(300); 
+            $(sel).fadeIn(300);  
         $('.size-table').not(sel).find('li input[type=checkbox]+label').removeClass('marked');     
 
 });
@@ -333,7 +334,7 @@ $(document).ready(function () {
             'display': 'none'
         }); 
         
-		$(selP).fadeIn(300);  
+		$(selP).fadeIn(300);
 });
     
     
@@ -812,12 +813,12 @@ function eShowR(num){
 
 function bShow(num){
 	for (var i = 1; i < 3; i++) 
-		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+		document.getElementById ('b-table' + i).style.display = (i == num) ? 'block' : 'none'
 };
 
 function bShowE(num){
 	for (var i = 3; i < 5; i++) 
-		document.getElementById ('e-table' + i).style.display = (i == num) ? 'block' : 'none'
+		document.getElementById ('b-table' + i).style.display = (i == num) ? 'block' : 'none'
 };
 
 function bShowR(num){
